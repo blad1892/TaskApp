@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-21:12
-INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-21:12
-INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-21:12
-INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-21:12
+ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\1adead4b5ec80ae564436490d87d1ee4\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.1.aar\3addcda43b8a7bb32e983ea036d9f174\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\057701051a57770015c279e6d15de77d\AndroidManifest.xml:17:1-22:12
@@ -16,25 +16,25 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\bladimir rojas
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\24fe47bb742d01b16ee6d055a5eb1163\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\d458c67260feadd16c99ed7a461fee7b\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b2ad62773ec6303279e34a8c60446362\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-21:12
-INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-21:12
-INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-22:12
 	package
 		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:3:5-36
 		INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-21:12
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-22:12
 		INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-21:12
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-22:12
 		INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:5:5-19:19
+ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:5:5-20:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.1.aar\3addcda43b8a7bb32e983ea036d9f174\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.1.aar\3addcda43b8a7bb32e983ea036d9f174\AndroidManifest.xml:9:5-20
 	android:supportsRtl
@@ -63,6 +63,10 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:16:17-77
 	android:name
 		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:16:27-74
+activity#ado.edu.itlas.taskapp.ActivityCategoria
+ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:19:9-64
+	android:name
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:19:19-52
 uses-sdk
 INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
