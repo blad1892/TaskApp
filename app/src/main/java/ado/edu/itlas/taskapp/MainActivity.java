@@ -10,29 +10,26 @@ import ado.edu.itlas.taskapp.vista.CategoriaActivity;
 
 
 public class MainActivity extends AppCompatActivity {
-    /*
-    *https://github.com/blad1892/TaskApp
-    *
-     */
+    private  static final String log_Tac = "MainActivity";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button btnCategoria;
+        btnCategoria=findViewById(R.id.btnCategoria);
 
-        Button btnCategoria=findViewById(R.id.btnCategoria);
         btnCategoria.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intento = new Intent(MainActivity.this,ActivityCategoria.class);
-                startActivities(new Intent[]{intento});
-
+            public void onClick(View view) {
+                Intent inten= new Intent(MainActivity.this, CategoriaActivity.class);
+                startActivity(inten);
             }
         });
 
 
 
     }
-
 
 }

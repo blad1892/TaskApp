@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TaskApp</string>
+    <string name="registro_de_categoria">Registro de Categoria</string>
+    <string name="nombre">Nombre</string>
+    <string name="categoria">Categoria</string>
+    <string name="guardar">Guardar</string>
 </resources>

@@ -1,7 +1,10 @@
 package ado.edu.itlas.taskapp.entidad;
 
+
+import java.security.PrivateKey;
+
 public class Categoria {
-    private Integer id;
+   private Integer id;
 
     public Integer getId() {
         return id;
@@ -11,7 +14,6 @@ public class Categoria {
         this.id = id;
     }
 
-    private String descripcion;
     public String getDescripcion() {
         return descripcion;
     }
@@ -20,8 +22,15 @@ public class Categoria {
         this.descripcion = descripcion;
     }
 
+    private String descripcion;
+
+
     @Override
     public String toString() {
-        return "Categoria{" + "id=" + id + ", descripcion='" + descripcion + '\'' + '}';
+        final StringBuilder sb = new StringBuilder("Categoria{");
+        sb.append("id=").append(id);
+        sb.append(", descripcion='").append(descripcion).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 }
