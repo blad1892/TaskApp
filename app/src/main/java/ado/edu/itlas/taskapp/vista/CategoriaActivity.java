@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.security.cert.CertificateRevokedException;
 import java.util.List;
@@ -27,12 +28,12 @@ public class CategoriaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categoria_);
 
-        categoriaRepositorio=new CategoriaRepositorioImp(this);
+        categoriaRepositorio = new CategoriaRepositorioImp(CategoriaActivity.this);
 
         Button btnGuardar;
-        final EditText txtNombre=(EditText) findViewById(R.id.txtNombre);
+        final EditText txtNombre = (EditText) findViewById(R.id.txtNombre);
 
-        btnGuardar=(Button)findViewById(R.id.btnGuardar);
+        btnGuardar = (Button) findViewById(R.id.btnGuardar);
 
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,10 +43,13 @@ public class CategoriaActivity extends AppCompatActivity {
 
 
                 Log.i(LOC_TAC, categoria.toString());
+                //ConexionDb conn = new ConexionDb(CategoriaActivity.this);
+                ConexionDb conn = new ConexionDb(CategoriaActivity.this);
+                Toast.makeText(CategoriaActivity.this,"Registro categoria exitosa" , Toast.LENGTH_LONG);
+                Log.i(LOC_TAC, categoria.toString());
 
-
-
-            }});
+            }
+        });
 
     }
 }
