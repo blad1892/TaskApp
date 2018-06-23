@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.security.cert.CertificateRevokedException;
 
@@ -33,12 +34,14 @@ public class CategoriaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Categoria categoria = new Categoria();
-                categoria.setDescripcion(txtNombre.getText().toString());
+                categoria.setNombre(txtNombre.getText().toString());
 
 
                 Log.i(LOC_TAC, categoria.toString());
                 categoriaRepositorio.guardar(categoria);
                 Log.i(LOC_TAC, categoria.toString());
+
+                Toast.makeText(CategoriaActivity.this,"Categoria agregada",Toast.LENGTH_LONG);
 
             }
         });

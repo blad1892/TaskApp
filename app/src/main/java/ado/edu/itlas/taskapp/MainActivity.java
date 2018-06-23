@@ -20,15 +20,25 @@ public class MainActivity extends AppCompatActivity {
 
 
        Button btnCategoria = (Button) findViewById(R.id.btnCategoria);
+       Button btnMostrarLista = (Button) findViewById(R.id.btnMostrarLista);
 
+        btnMostrarLista.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent inten= new Intent(MainActivity.this, CategoriaListActivity.class);
+                startActivity(inten);
+
+            }
+        });
         btnCategoria.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent inten= new Intent(MainActivity.this, CategoriaActivity.class);
                 startActivity(inten);
+
             }
         });
-
+//
 
 
     }

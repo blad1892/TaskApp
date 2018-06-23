@@ -12,6 +12,6 @@ public interface CategoriaRepositorio {
 
     boolean guardar(Categoria categoria);
     boolean actualizar(Categoria categoria);
-    Categoria busacar(int id);
+    Categoria buscar(int id);
     List<Categoria>buscar(String nombre);
 }
