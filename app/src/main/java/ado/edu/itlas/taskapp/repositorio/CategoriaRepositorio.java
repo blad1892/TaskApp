@@ -14,6 +14,4 @@ public interface CategoriaRepositorio {
     boolean actualizar(Categoria categoria);
     Categoria busacar(int id);
     List<Categoria>buscar(String nombre);
-
-
 }

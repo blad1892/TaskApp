@@ -29,9 +29,7 @@ public class ConexionDb extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        Log.i(LOG_TAB, "Borrando la base de dato anctigua y Creando la nueva base de datos ");
-        db.execSQL("DROP TABLE IF EXISTS taskapp");
-        db.execSQL(ExtructuraDb.TABLA_CATEGORIA);
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+
     }
 }

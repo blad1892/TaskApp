@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\bladimir rojas\\Desktop\\prjAndroid\\TaskApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-lt\\values-lt.xml",
+            "outputFile": "C:\\Users\\MESCyT\\Desktop\\prjAndroid\\TaskApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-lt\\values-lt.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\bladimir rojas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1adead4b5ec80ae564436490d87d1ee4\\res\\values-lt\\values-lt.xml",
+                    "source": "C:\\Users\\MESCyT\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\0feaa2b34b054ab5060f916352b9f981\\res\\values-lt\\values-lt.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\bladimir rojas\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\f5ecb6389fa5dce365b22deff3e01915\\res\\values-lt\\values-lt.xml",
+                    "source": "C:\\Users\\MESCyT\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\0b039ae5372c7c5cc977cab4634993a0\\res\\values-lt\\values-lt.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

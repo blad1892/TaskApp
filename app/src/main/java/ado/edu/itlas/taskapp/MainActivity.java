@@ -10,15 +10,16 @@ import ado.edu.itlas.taskapp.vista.CategoriaActivity;
 
 
 public class MainActivity extends AppCompatActivity {
-    private  static final String log_Tac = "MainActivity";
+    private static final String log_Tac = "MainActivity";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btnCategoria;
-        btnCategoria=findViewById(R.id.btnCategoria);
+
+
+       Button btnCategoria = (Button) findViewById(R.id.btnCategoria);
 
         btnCategoria.setOnClickListener(new View.OnClickListener() {
             @Override
