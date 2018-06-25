@@ -24,7 +24,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="ado.edu.itlas.taskapp.CategoriaListActivity" />
+        <activity android:name="ado.edu.itlas.taskapp.vista.CategoriaListActivity" >
+        </activity>
+        <activity android:name="ado.edu.itlas.taskapp.vista.CategoriaActivity" >
+        </activity>
     </application>
 
 </manifest>

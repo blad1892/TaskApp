@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 
 import ado.edu.itlas.taskapp.vista.CategoriaActivity;
+import ado.edu.itlas.taskapp.vista.CategoriaListActivity;
+import ado.edu.itlas.taskapp.vista.CategoriaListAdapter;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -19,9 +21,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-       Button btnCategoria = (Button) findViewById(R.id.btnCategoria);
-       Button btnMostrarLista = (Button) findViewById(R.id.btnMostrarLista);
 
+
+        Button btnMostrarLista = (Button) findViewById(R.id.btnCategoriaLista);
         btnMostrarLista.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        Button btnCategoria = (Button) findViewById(R.id.btnCategoria);
         btnCategoria.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-//
+
 
 
     }

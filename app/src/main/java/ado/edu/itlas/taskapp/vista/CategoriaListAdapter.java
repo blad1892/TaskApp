@@ -48,7 +48,7 @@ List<Categoria>categorias;
 
         if(view == null  ){
             LayoutInflater inflater = LayoutInflater.from(contexto);
-            view=inflater.inflate(R.layout.categoria_listview_row,null,true);
+            view=inflater.inflate(R.layout.categoria_listaview_row,null,true);
 
         }
         TextView lblCategoriaId =view.findViewById(R.id.lblCategoriaId);
@@ -59,6 +59,7 @@ List<Categoria>categorias;
 
         lblCategoriaId.setText(cat.getId().toString());
         lblNombreCategoria.setText(cat.getNombre());
-        return null;
+
+        return lblNombreCategoria;
     }
 }

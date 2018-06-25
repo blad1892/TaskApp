@@ -3,6 +3,7 @@ package ado.edu.itlas.taskapp.vista;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,7 +42,10 @@ public class CategoriaActivity extends AppCompatActivity {
                 categoriaRepositorio.guardar(categoria);
                 Log.i(LOC_TAC, categoria.toString());
 
-                Toast.makeText(CategoriaActivity.this,"Categoria agregada",Toast.LENGTH_LONG);
+            Toast miToas= Toast.makeText(CategoriaActivity.this,"Categoria agregada",Toast.LENGTH_LONG);
+            miToas.setGravity(Gravity.CENTER,20,40);
+            miToas.show();
+
 
             }
         });
