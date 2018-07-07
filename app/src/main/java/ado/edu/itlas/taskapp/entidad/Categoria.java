@@ -1,9 +1,11 @@
 package ado.edu.itlas.taskapp.entidad;
 
 
+import java.io.Serializable;
 import java.security.PrivateKey;
 
-public class Categoria {
+
+public class Categoria implements Serializable{
    private Integer id;
     private String nombre;
 

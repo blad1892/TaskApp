@@ -1,5 +1,6 @@
 package ado.edu.itlas.taskapp.vista;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,6 +21,7 @@ public class CategoriaActivity extends AppCompatActivity {
 
     private static final String LOC_TAC = "CategoriaActivity";
     private CategoriaRepositorio categoriaRepositorio;
+    private  Categoria categoria;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,24 +30,45 @@ public class CategoriaActivity extends AppCompatActivity {
 
         categoriaRepositorio=new CategoriaRepositorioImp(this);
 
-        Button btnGuardar;
+
+
+
         final EditText txtNombre=(EditText) findViewById(R.id.txtNombre);
-        btnGuardar=(Button)findViewById(R.id.btnGuardar);
+        Button btnGuardar=(Button)findViewById(R.id.btnGuardar);
+
+        Bundle paraBludle = getIntent().getExtras();
+
+        if(paraBludle != null && paraBludle.containsKey("categoria")){
+            categoria=(Categoria) paraBludle.getSerializable("categoria");
+            txtNombre.setText(categoria.getNombre());
+            btnGuardar.setText("Actualizar");
+        }
+
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Categoria categoria = new Categoria();
+//                Categoria categoria = new Categoria();
+
+
+                if (categoria == null) {
+                    categoria = new Categoria();
+                }
+
                 categoria.setNombre(txtNombre.getText().toString());
 
 
                 Log.i(LOC_TAC, categoria.toString());
+
                 categoriaRepositorio.guardar(categoria);
+
+
+
+
                 Log.i(LOC_TAC, categoria.toString());
 
-            Toast miToas= Toast.makeText(CategoriaActivity.this,"Categoria agregada",Toast.LENGTH_LONG);
-            miToas.setGravity(Gravity.CENTER,20,40);
-            miToas.show();
-
+                    Toast miToas = Toast.makeText(CategoriaActivity.this, "Categoria agregada", Toast.LENGTH_LONG);
+                    miToas.setGravity(Gravity.CENTER, 20, 40);
+                    miToas.show();
 
             }
         });

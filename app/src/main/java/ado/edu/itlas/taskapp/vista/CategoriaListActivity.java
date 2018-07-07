@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.List;
@@ -24,13 +26,23 @@ public class CategoriaListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_categoria_lista);
 
         categoriaRepositorio = new CategoriaRepositorioImp(this);
-        List<Categoria>categorias=categoriaRepositorio.buscar(null);
+        List<Categoria> categorias = categoriaRepositorio.buscar(null);
 
-        Log.i(log_Tac,"Total de categoria");
-    ListView catListView = (ListView) findViewById(R.id.categoria_listview);
-      catListView.setAdapter(new CategoriaListAdapter(this,categorias));
+        Log.i(log_Tac, "Total de categoria");
+        ListView catListView = (ListView) findViewById(R.id.categoria_listview);
+        catListView.setAdapter(new CategoriaListAdapter(this, categorias));
 
+        catListView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> adtarView, View view, int position, long id) {
+                Categoria cat = (Categoria) adtarView.getItemAtPosition(position);
 
+                Intent  regCatIntento = new Intent(CategoriaListActivity.this, CategoriaActivity.class);
+                regCatIntento.putExtra("categoria",cat);
+                startActivity(regCatIntento);
+            }
+        });
 
 
     }
