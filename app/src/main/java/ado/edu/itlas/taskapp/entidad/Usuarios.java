@@ -48,7 +48,7 @@ public class Usuarios {
         this.contracena = contracena;
     }
 
-    public TipoUsuario getTipoUsuario() {
+    public String getTipoUsuario() {
         return tipoUsuario;
     }
 
