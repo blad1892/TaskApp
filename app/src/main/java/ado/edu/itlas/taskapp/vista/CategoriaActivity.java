@@ -30,9 +30,6 @@ public class CategoriaActivity extends AppCompatActivity {
 
         categoriaRepositorio=new CategoriaRepositorioImp(this);
 
-
-
-
         final EditText txtNombre=(EditText) findViewById(R.id.txtNombre);
         Button btnGuardar=(Button)findViewById(R.id.btnGuardar);
 
@@ -48,28 +45,19 @@ public class CategoriaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 //                Categoria categoria = new Categoria();
-
-
                 if (categoria == null) {
                     categoria = new Categoria();
                 }
 
                 categoria.setNombre(txtNombre.getText().toString());
 
-
                 Log.i(LOC_TAC, categoria.toString());
-
                 categoriaRepositorio.guardar(categoria);
-
-
-
-
                 Log.i(LOC_TAC, categoria.toString());
 
                     Toast miToas = Toast.makeText(CategoriaActivity.this, "Categoria agregada", Toast.LENGTH_LONG);
                     miToas.setGravity(Gravity.CENTER, 20, 40);
                     miToas.show();
-
             }
         });
 

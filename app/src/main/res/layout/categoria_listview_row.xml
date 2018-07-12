@@ -13,7 +13,8 @@
 
         android:layout_weight="1"
         android:text="10"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        />
 
     <TextView
         android:id="@+id/lblNombreCategoria"
