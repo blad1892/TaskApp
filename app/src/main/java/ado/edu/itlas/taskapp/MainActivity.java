@@ -20,10 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-
-        Button btnMostrarLista = (Button) findViewById(R.id.btnCategoriaLista);
+       Button btnMostrarLista = (Button) findViewById(R.id.btnCategoriaLista);
         btnMostrarLista.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

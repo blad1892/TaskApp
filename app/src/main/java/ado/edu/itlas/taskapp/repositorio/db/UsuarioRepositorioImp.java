@@ -6,11 +6,11 @@ import android.database.sqlite.SQLiteDatabase;
 
 import java.util.List;
 
-import javax.swing.text.AbstractDocument;
+// import javax.swing.text.AbstractDocument;
 
 import ado.edu.itlas.taskapp.entidad.Usuarios;
 import ado.edu.itlas.taskapp.repositorio.UsuarioRepositorio;
-import sun.rmi.runtime.Log;
+//import sun.rmi.runtime.Log;
 
 public class UsuarioRepositorioImp implements UsuarioRepositorio {
 
@@ -59,6 +59,7 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
 
     @Override
     public List<Usuarios> buscar(String nombre) {
+
         return null;
     }
 }

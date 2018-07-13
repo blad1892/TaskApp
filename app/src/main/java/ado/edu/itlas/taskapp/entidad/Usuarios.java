@@ -13,7 +13,7 @@ public class Usuarios {
     private Integer id;
     private String nombre;
     private String email;
-    private String contracena;
+    private String contraceña;
     private TipoUsuario tipoUsuario;
 
     public Integer getId() {
@@ -41,15 +41,15 @@ public class Usuarios {
     }
 
     public String getContracena() {
-        return contracena;
+        return contraceña;
     }
 
     public void setContracena(String contracena) {
-        this.contracena = contracena;
+        this.contraceña = contracena;
     }
 
     public String getTipoUsuario() {
-        return tipoUsuario;
+        return String.valueOf(tipoUsuario);
     }
 
     public void setTipoUsuario(TipoUsuario tipoUsuario) {
@@ -62,7 +62,7 @@ public class Usuarios {
         sb.append("id=").append(id);
         sb.append(", nombre='").append(nombre).append('\'');
         sb.append(", email='").append(email).append('\'');
-        sb.append(", contracena='").append(contracena).append('\'');
+        sb.append(", contraceña='").append(contraceña).append('\'');
         sb.append(", tipoUsuario=").append(tipoUsuario);
         sb.append('}');
         return sb.toString();

@@ -79,9 +79,6 @@ public class CategoriaRepositorioImp implements CategoriaRepositorio {
             int id = cursor.getInt(cursor.getColumnIndex("id"));
             String nombre = cursor.getString(cursor.getColumnIndex(CAMPO_NOMBRE));
 
-         /* Categoria c = new Categoria();
-            c.setId(id);
-            c.setNombre(nombre);*/
 
             categorias.add(new Categoria(id, nombre));
             cursor.moveToNext();

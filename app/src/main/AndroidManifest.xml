@@ -16,13 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".vista.CategoriaListActivity">
-        </activity>
-
-        <activity android:name=".vista.CategoriaActivity">
-        </activity>
-
+        <activity android:name=".vista.CategoriaListActivity"></activity>
+        <activity android:name=".vista.CategoriaActivity"></activity>
+        <activity android:name=".vista.LoginRegistroActivity"></activity>
     </application>
 
 </manifest>
