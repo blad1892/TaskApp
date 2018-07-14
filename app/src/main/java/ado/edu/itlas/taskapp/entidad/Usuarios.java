@@ -4,7 +4,7 @@ package ado.edu.itlas.taskapp.entidad;
  * Created by MESCyT on 7/7/2018.
  */
 
-public class Usuarios {
+public class Usuarios  {
     public enum TipoUsuario {
         TECNICO, NORMAL
     }
@@ -15,7 +15,7 @@ public class Usuarios {
     private String email;
     private String contraceña;
     private String confirmarContraceña;
-    private String tipoUsuario;
+    private TipoUsuario tipoUsuario;
 
     public String getConfirmarContraceña() {
         return confirmarContraceña;
@@ -61,11 +61,11 @@ public class Usuarios {
         return String.valueOf(tipoUsuario);
     }
 
-    public void setTipoUsuario(String tipoUsuario) {
+    public void setTipoUsuario(TipoUsuario tipoUsuario) {
         this.tipoUsuario = tipoUsuario;
     }
 
-    public Usuarios(Integer id, String nombre, String email, String contraceña, String tipoUsuario) {
+    public Usuarios(Integer id, String nombre, String email, String contraceña, TipoUsuario tipoUsuario) {
         this.id = id;
         this.nombre = nombre;
         this.email = email;

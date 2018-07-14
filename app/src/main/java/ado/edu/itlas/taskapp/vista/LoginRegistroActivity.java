@@ -18,7 +18,7 @@ import ado.edu.itlas.taskapp.repositorio.db.UsuarioRepositorioImp;
 
 public class LoginRegistroActivity extends AppCompatActivity {
 
-    final static String LOC_TAG="Login Registro Activity";
+    final static String LOC_TAG = "Login Registro Activity";
     private Usuarios usuarios;
     private UsuarioRepositorio usuarioRepositorio;
 
@@ -28,7 +28,7 @@ public class LoginRegistroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_registro);
 
-        usuarioRepositorio=new UsuarioRepositorioImp(this);
+        usuarioRepositorio = new UsuarioRepositorioImp(this);
 
         TextView lblRegistrarse = (TextView) findViewById(R.id.lblRegistrarse);
         Button btnRegistrar = (Button) findViewById(R.id.btnRegistrar);
@@ -57,17 +57,21 @@ public class LoginRegistroActivity extends AppCompatActivity {
                 } else if (rdNormal.isChecked()) {
                     usuarios.setTipoUsuario("NORMAL");
                 }
-                Log.i(LOC_TAG, usuarios.toString());
-                usuarioRepositorio.guardar(usuarios);
-                Log.i(LOC_TAG,usuarios.toString());
+//                if (txtConfirmarContraceña.getText().toString()==txtContraceña.getText().toString()) {
 
-                Toast miToas = Toast.makeText(LoginRegistroActivity.this, "Usuario Registrado", Toast.LENGTH_LONG);
-                miToas.setGravity(Gravity.CENTER, 20, 40);
-                miToas.show();
+                    Log.i(LOC_TAG, usuarios.toString());
+                    usuarioRepositorio.guardar(usuarios);
+                    Log.i(LOC_TAG, usuarios.toString());
 
+                    Toast miToas = Toast.makeText(LoginRegistroActivity.this, "Usuario Registrado", Toast.LENGTH_LONG);
+                    miToas.setGravity(Gravity.CENTER, 20, 40);
+                    miToas.show();
+//                } else {
+//                    Toast miToas = Toast.makeText(LoginRegistroActivity.this, "La contraceña no coisiden", Toast.LENGTH_LONG);
+//                    miToas.setGravity(Gravity.CENTER, 20, 40);
+//                    miToas.show();
+//                }
             }
         });
-
-
     }
 }

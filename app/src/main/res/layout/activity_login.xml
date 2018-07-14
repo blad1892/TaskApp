@@ -8,14 +8,15 @@
 
     <LinearLayout
         android:layout_width="368dp"
-        android:layout_height="159dp"
-        android:layout_marginTop="128dp"
+        android:layout_height="179dp"
 
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.28"
         tools:ignore="MissingConstraints">
 
         <TextView
@@ -69,14 +70,7 @@
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteY="192dp" />
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="368dp"
-            android:layout_height="wrap_content"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="300dp">
 
-        </android.support.design.widget.TextInputLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -86,9 +80,10 @@
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.694"
+        app:layout_constraintVertical_bias="0.626"
         tools:ignore="MissingConstraints">
 
         <TextView
@@ -115,12 +110,6 @@
             tools:layout_editor_absoluteX="218dp"
             tools:layout_editor_absoluteY="373dp" />
     </LinearLayout>
-
-    <android.support.constraint.Barrier
-        android:id="@+id/barrier2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="left" />
 
 
 </android.support.constraint.ConstraintLayout>

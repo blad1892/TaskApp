@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import ado.edu.itlas.taskapp.MainActivity;
 import ado.edu.itlas.taskapp.R;
 import ado.edu.itlas.taskapp.repositorio.UsuarioRepositorio;
 import ado.edu.itlas.taskapp.repositorio.db.UsuarioRepositorioImp;
@@ -35,7 +36,8 @@ public class LoginActivity extends AppCompatActivity {
         btnIniciar.setOnClickListener(new View.OnClickListener() {
                                           @Override
                                           public void onClick(View v) {
-
+                                              Intent intento = new Intent(LoginActivity.this, MainActivity.class);
+                                              startActivity(intento);
                                           }
                                       }
 

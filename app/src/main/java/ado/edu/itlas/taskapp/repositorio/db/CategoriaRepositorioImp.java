@@ -19,7 +19,7 @@ public class CategoriaRepositorioImp implements CategoriaRepositorio {
    private ConexionDb conexiodb;
 
     private static final String CAMPO_NOMBRE="nombre";
-    private  static  final  String  TABLA_CATEGORIA="categoria";
+    private static  final  String  TABLA_CATEGORIA="categoria";
     public CategoriaRepositorioImp(Context context) {
         conexiodb = new ConexionDb(context);
     }
@@ -78,7 +78,6 @@ public class CategoriaRepositorioImp implements CategoriaRepositorio {
         while (!cursor.isAfterLast()) {
             int id = cursor.getInt(cursor.getColumnIndex("id"));
             String nombre = cursor.getString(cursor.getColumnIndex(CAMPO_NOMBRE));
-
 
             categorias.add(new Categoria(id, nombre));
             cursor.moveToNext();

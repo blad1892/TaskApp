@@ -25,6 +25,7 @@ public class ConexionDb extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         Log.i(LOG_TAB, "Creando la base de datos");
         db.execSQL(ExtructuraDb.TABLA_CATEGORIA);
+        db.execSQL(ExtructuraDb.TABLA_USUARIO);
 
     }
 

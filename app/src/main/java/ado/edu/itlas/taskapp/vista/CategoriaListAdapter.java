@@ -56,9 +56,9 @@ public class CategoriaListAdapter extends BaseAdapter {
 
         Categoria cat = categorias.get(i);
 
-            lblCategoriaId.setText(cat.getId().toString());
-            lblNombreCategoria.setText(cat.getNombre());
-            return lblNombreCategoria;
+        lblCategoriaId.setText(cat.getId().toString());
+        lblNombreCategoria.setText(cat.getNombre());
+        return view;
 
     }
 }

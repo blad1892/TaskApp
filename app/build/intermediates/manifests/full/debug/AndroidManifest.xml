@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="ado.edu.itlas.taskapp.MainActivity" >
+        <activity android:name="ado.edu.itlas.taskapp.vista.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,7 +27,8 @@
         <activity android:name="ado.edu.itlas.taskapp.vista.CategoriaListActivity" />
         <activity android:name="ado.edu.itlas.taskapp.vista.CategoriaActivity" />
         <activity android:name="ado.edu.itlas.taskapp.vista.LoginRegistroActivity" />
-        <activity android:name="ado.edu.itlas.taskapp.vista.LoginActivity" />
+        <activity android:name="ado.edu.itlas.taskapp.MainActivity" />
+>
         <activity android:name="ado.edu.itlas.taskapp.vista.ListaUsuario" />
     </application>
 

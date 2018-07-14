@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".vista.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,7 +19,7 @@
         <activity android:name=".vista.CategoriaListActivity" />
         <activity android:name=".vista.CategoriaActivity" />
         <activity android:name=".vista.LoginRegistroActivity" />
-        <activity android:name=".vista.LoginActivity" />
+        <activity android:name=".MainActivity"></activity>>
         <activity android:name=".vista.ListaUsuario"></activity>
     </application>
 
