@@ -14,7 +14,16 @@ public class Usuarios {
     private String nombre;
     private String email;
     private String contraceña;
-    private TipoUsuario tipoUsuario;
+    private String confirmarContraceña;
+    private String tipoUsuario;
+
+    public String getConfirmarContraceña() {
+        return confirmarContraceña;
+    }
+
+    public void setConfirmarContraceña(String confirmarContraceña) {
+        this.confirmarContraceña = confirmarContraceña;
+    }
 
     public Integer getId() {
         return id;
@@ -44,7 +53,7 @@ public class Usuarios {
         return contraceña;
     }
 
-    public void setContracena(String contracena) {
+    public void setContraceña(String contracena) {
         this.contraceña = contracena;
     }
 
@@ -52,19 +61,27 @@ public class Usuarios {
         return String.valueOf(tipoUsuario);
     }
 
-    public void setTipoUsuario(TipoUsuario tipoUsuario) {
+    public void setTipoUsuario(String tipoUsuario) {
         this.tipoUsuario = tipoUsuario;
+    }
+
+    public Usuarios(Integer id, String nombre, String email, String contraceña, String tipoUsuario) {
+        this.id = id;
+        this.nombre = nombre;
+        this.email = email;
+        this.contraceña = contraceña;
+       this.tipoUsuario = tipoUsuario;
     }
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Usuarios{");
-        sb.append("id=").append(id);
-        sb.append(", nombre='").append(nombre).append('\'');
-        sb.append(", email='").append(email).append('\'');
-        sb.append(", contraceña='").append(contraceña).append('\'');
-        sb.append(", tipoUsuario=").append(tipoUsuario);
-        sb.append('}');
-        return sb.toString();
+        return "Usuarios{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", email='" + email + '\'' +
+                ", contraceña='" + contraceña + '\'' +
+                ", confirmarContraceña='" + confirmarContraceña + '\'' +
+                ", tipoUsuario='" + tipoUsuario + '\'' +
+                '}';
     }
 }

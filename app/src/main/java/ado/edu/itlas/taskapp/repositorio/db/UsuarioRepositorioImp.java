@@ -2,8 +2,10 @@ package ado.edu.itlas.taskapp.repositorio.db;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.util.ArrayList;
 import java.util.List;
 
 // import javax.swing.text.AbstractDocument;
@@ -23,7 +25,7 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
     private static final String CAMPO_TIPO_USUARIO = "tipoUsuario";
 
     public UsuarioRepositorioImp(Context context) {
-        new ConexionDb(context);
+        conexionDb= new ConexionDb(context);
     }
 
 
@@ -58,8 +60,29 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
     }
 
     @Override
-    public List<Usuarios> buscar(String nombre) {
+    public List<Usuarios> buscar(String buscar) {
 
-        return null;
+        List<Usuarios> usuarios = new ArrayList<>();
+
+        SQLiteDatabase db = conexionDb.getReadableDatabase();
+        String[] colummas = {"id", CAMPO_NOMBRE, CAMPO_EMAIL, CAMPO_CONTRACENA, CAMPO_TIPO_USUARIO};
+
+        Cursor cursor = db.query(TABLA_USUARIO,colummas,null,null,null,null,null);
+        cursor.moveToFirst();
+
+        while (!cursor.isAfterLast()){
+            int id =cursor.getInt(cursor.getColumnIndex("id"));
+            String nombre =cursor.getString(cursor.getColumnIndex(CAMPO_NOMBRE));
+            String email =cursor.getString(cursor.getColumnIndex(CAMPO_EMAIL));
+            String contraceña =cursor.getString(cursor.getColumnIndex(CAMPO_CONTRACENA));
+            String tipoUsuario =cursor.getString(cursor.getColumnIndex(CAMPO_TIPO_USUARIO));
+
+            usuarios.add(new Usuarios(id,nombre,email,contraceña,tipoUsuario));
+            cursor.moveToNext();
+        }
+        db.close();
+        cursor.close();
+
+        return usuarios;
     }
 }

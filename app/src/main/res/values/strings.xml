@@ -17,7 +17,7 @@
     <string name="cancelar">Cancelar</string>
 
 
-    <string name="registrarse">Registrarse</string>
+    <string name="btnregistrarse">Registrarse</string>
     <string name="iniciar">Iniciar</string>
     <string name="email_a">Email</string>
 
@@ -26,4 +26,7 @@
     <string name="tecnico">TECNICO</string>
     <string name="normal">NORMAL</string>
     <string name="contrace_confirmar_a">contraceña</string>
+    <string name="mostrar_lista_categoria">Mostrar Lista categoria</string>
+    <!--<string name="agregar_categoria">Agregar Categoria</string>-->
+    <string name="registrarse">Registrarse</string>
 </resources>

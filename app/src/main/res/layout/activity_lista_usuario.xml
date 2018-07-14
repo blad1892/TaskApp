@@ -4,36 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".vista.ListaUsuario">
 
     <LinearLayout
-        android:layout_width="360dp"
-        android:layout_height="363dp"
-        android:orientation="vertical"
+        android:layout_width="368dp"
+        android:layout_height="503dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
-        <Button
-            android:id="@+id/btnRegistrarse"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/lblId"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/registrarse" />
+            android:layout_weight="0.08"
+            android:text="100" />
 
-        <Button
-            android:id="@+id/btnCategoria"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/lblNombreUsuario"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/agregar_categoria" />
+            android:layout_weight="1"
+            android:text="TextView" />
 
-        <Button
-            android:id="@+id/btnCategoriaLista"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/mostrar_lista_categoria" />
-
+            android:layout_weight="0.2"
+            android:text="TextView" />
     </LinearLayout>
-
 </android.support.constraint.ConstraintLayout>

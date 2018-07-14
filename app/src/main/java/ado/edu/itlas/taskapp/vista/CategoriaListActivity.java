@@ -43,7 +43,5 @@ public class CategoriaListActivity extends AppCompatActivity {
                 startActivity(regCatIntento);
             }
         });
-
-
     }
 }
