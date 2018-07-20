@@ -32,6 +32,7 @@
         <activity android:name="ado.edu.itlas.taskapp.vista.ActivityListaAdapterTecnico" />
         <activity android:name="ado.edu.itlas.taskapp.vista.TareaUsuarioNormal" />
         <activity android:name="ado.edu.itlas.taskapp.vista.CrearTareas" />
+        <activity android:name="ado.edu.itlas.taskapp.vista.MostrarTareaCreada" />
     </application>
 
 </manifest>

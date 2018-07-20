@@ -24,7 +24,8 @@
         <activity android:name=".vista.TareaUsuarioTecnico" />
         <activity android:name=".vista.ActivityListaAdapterTecnico" />
         <activity android:name=".vista.TareaUsuarioNormal" />
-        <activity android:name=".vista.CrearTareas"></activity>
+        <activity android:name=".vista.CrearTareas" />
+        <activity android:name=".vista.MostrarTareaCreada"></activity>
     </application>
 
 </manifest>
