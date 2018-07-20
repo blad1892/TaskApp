@@ -1,12 +1,13 @@
 package ado.edu.itlas.taskapp.entidad;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by MESCyT on 7/7/2018.
  */
 
-public class Tareas {
+public class Tareas implements Serializable{
 
     public enum TareaEstado{
         PENDIENTE,

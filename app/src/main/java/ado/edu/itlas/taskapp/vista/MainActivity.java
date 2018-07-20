@@ -1,4 +1,4 @@
-package ado.edu.itlas.taskapp;
+package ado.edu.itlas.taskapp.vista;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,10 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import ado.edu.itlas.taskapp.vista.CategoriaActivity;
-import ado.edu.itlas.taskapp.vista.CategoriaListActivity;
-import ado.edu.itlas.taskapp.vista.CategoriaListAdapter;
-import ado.edu.itlas.taskapp.vista.LoginActivity;
+import ado.edu.itlas.taskapp.R;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -36,15 +33,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent inten= new Intent(MainActivity.this, CategoriaActivity.class);
                 startActivity(inten);
-            }
-        });
-
-        Button btnRegistrarse = (Button)findViewById(R.id.btnRegistrarse);
-        btnRegistrarse.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intento = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(intento);
             }
         });
     }

@@ -4,6 +4,8 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.view.Gravity;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,12 +14,15 @@ import java.util.List;
 
 import ado.edu.itlas.taskapp.entidad.Usuarios;
 import ado.edu.itlas.taskapp.repositorio.UsuarioRepositorio;
+import ado.edu.itlas.taskapp.vista.LoginRegistroActivity;
 //import sun.rmi.runtime.Log;
 
 public class UsuarioRepositorioImp implements UsuarioRepositorio {
 
     private ConexionDb conexionDb;
-    private final String LOC_TASG = "Guardando un usuario";
+    Usuarios usuarios;
+    private final String LOC_TAG = "Guardando un usuario";
+    private final String LOC_TAG2 = "Loguiar usuario";
 
     private static final String TABLA_USUARIO = "usuarios";
     private static final String CAMPO_NOMBRE = "nombre";
@@ -57,9 +62,8 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
         return false;
     }
 
-
     @Override
-    public int buscar(int id) {
+    public Usuarios buscar(int id) {
         List<Usuarios> usuarios = new ArrayList<>();
 
         SQLiteDatabase db = conexionDb.getReadableDatabase();
@@ -68,50 +72,64 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
         cursor.moveToFirst();
 
         while (!cursor.isAfterLast()) {
-//            if(id==cursor.getInt(cursor.getCount())){
+
             id = cursor.getInt(cursor.getColumnIndex("id"));
             String nombre = cursor.getString(cursor.getColumnIndex(CAMPO_NOMBRE));
             String email = cursor.getString(cursor.getColumnIndex(CAMPO_EMAIL));
             String contraceña = cursor.getString(cursor.getColumnIndex(CAMPO_CONTRACENA));
             String tipoUsuario = cursor.getString(cursor.getColumnIndex(CAMPO_TIPO_USUARIO));
 
-if(tipoUsuario=="TECNICO"){ usuarios.add(new Usuarios(id, nombre, email, contraceña, Usuarios.TipoUsuario.TECNICO));
-}
-
+            if (tipoUsuario == "TECNICO") {
+                usuarios.add(new Usuarios(id, nombre, email, contraceña, Usuarios.TipoUsuario.TECNICO));
+            } else if (tipoUsuario == "NORMAL") {
+                usuarios.add(new Usuarios(id, nombre, email, contraceña, Usuarios.TipoUsuario.NORMAL));
+            }
 
             cursor.moveToNext();
         }
-//        }
-        db.close();
-        cursor.close();
 
-        return id;
-    }
-
-    public Usuarios buscarUser(String username) {
-      Usuarios usuarios;
-
-        SQLiteDatabase db = conexionDb.getReadableDatabase();
-        String[] colummas = {"id", CAMPO_NOMBRE, CAMPO_EMAIL, CAMPO_CONTRACENA, CAMPO_TIPO_USUARIO};
-
-        Cursor cursor = db.query(TABLA_USUARIO, colummas, null, null, null, null, null);
-        cursor.moveToFirst();
-
-        while (!cursor.isAfterLast()) {
-            int id = cursor.getInt(cursor.getColumnIndex("id"));
-            String nombre = cursor.getString(cursor.getColumnIndex(CAMPO_NOMBRE));
-            String email = cursor.getString(cursor.getColumnIndex(CAMPO_EMAIL));
-            String contraceña = cursor.getString(cursor.getColumnIndex(CAMPO_CONTRACENA));
-            String tipoUsuario = cursor.getString(cursor.getColumnIndex(CAMPO_TIPO_USUARIO));
-
-//            usuarios.add(new Usuarios(id, nombre, email, contraceña, tipoUsuario));
-            cursor.moveToNext();
-        }
         db.close();
         cursor.close();
 
         return null;
+    }
 
+    public Usuarios buscarUser(String username) {//Este metodo estaba de la siguiente manera public Usuarios buscarUser(String username)
+        Usuarios usuarios = null;
+        String sql = "SELECT * FROM usuarios WHERE nombre ='" + username + "'";
+        SQLiteDatabase db = conexionDb.getReadableDatabase();
+//        String[] columnas = {"id", CAMPO_NOMBRE, CAMPO_EMAIL, CAMPO_CONTRACENA, CAMPO_TIPO_USUARIO};
+
+//        Cursor cursor = db.query(TABLA_USUARIO, columnas, null, null, null, null, null);
+        Cursor cursor = db.rawQuery(sql, null);
+        if (cursor.moveToFirst()) {
+
+            int id = cursor.getInt(cursor.getColumnIndex("id"));
+            String nombre = cursor.getString(cursor.getColumnIndex(CAMPO_NOMBRE));
+            String email = cursor.getString(cursor.getColumnIndex(CAMPO_EMAIL));
+            String contracena = cursor.getString(cursor.getColumnIndex(CAMPO_CONTRACENA));
+            String tipoUsuario = cursor.getString(cursor.getColumnIndex(CAMPO_TIPO_USUARIO));
+
+            if (tipoUsuario.equals("TECNICO")) {
+                usuarios = new Usuarios(id, nombre, email, contracena, Usuarios.TipoUsuario.TECNICO);
+                db.close();
+                cursor.close();
+            } else if (tipoUsuario.equals("NORMAL")) {
+                usuarios = new Usuarios(id, nombre, email, contracena, Usuarios.TipoUsuario.NORMAL);
+                db.close();
+                cursor.close();
+            }
+        }else {
+            db.close();
+            cursor.close();
+
+        }
+// else {
+//            return null;
+//        }
+
+
+        return usuarios ;
     }
 
     @Override

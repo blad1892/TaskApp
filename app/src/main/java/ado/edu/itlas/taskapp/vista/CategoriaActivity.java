@@ -21,22 +21,22 @@ public class CategoriaActivity extends AppCompatActivity {
 
     private static final String LOC_TAC = "CategoriaActivity";
     private CategoriaRepositorio categoriaRepositorio;
-    private  Categoria categoria;
+    private Categoria categoria;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categoria_);
 
-        categoriaRepositorio=new CategoriaRepositorioImp(this);
+        categoriaRepositorio = new CategoriaRepositorioImp(this);
 
-        final EditText txtNombre=(EditText) findViewById(R.id.txtNombre);
-        Button btnGuardar=(Button)findViewById(R.id.btnGuardar);
+        final EditText txtNombre = (EditText) findViewById(R.id.txtNombre);
+        final Button btnGuardar = (Button) findViewById(R.id.btnGuardar);
 
         Bundle paraBludle = getIntent().getExtras();
 
-        if(paraBludle != null && paraBludle.containsKey("categoria")){
-            categoria=(Categoria) paraBludle.getSerializable("categoria");
+        if (paraBludle != null && paraBludle.containsKey("categoria")) {
+            categoria = (Categoria) paraBludle.getSerializable("categoria");
             txtNombre.setText(categoria.getNombre());
             btnGuardar.setText("Actualizar");
         }
@@ -55,9 +55,15 @@ public class CategoriaActivity extends AppCompatActivity {
                 categoriaRepositorio.guardar(categoria);
                 Log.i(LOC_TAC, categoria.toString());
 
-                    Toast miToas = Toast.makeText(CategoriaActivity.this, "Categoria agregada", Toast.LENGTH_LONG);
+                if (btnGuardar.getText() == "ACTUALIZAR") {
+                    Toast miToas = Toast.makeText(CategoriaActivity.this, "Categoria Actualizada", Toast.LENGTH_LONG);
                     miToas.setGravity(Gravity.CENTER, 20, 40);
                     miToas.show();
+                }else if(btnGuardar.getText()=="GUARDAR"){
+                    Toast miToas = Toast.makeText(CategoriaActivity.this, "Categoria Guardada", Toast.LENGTH_LONG);
+                    miToas.setGravity(Gravity.CENTER, 20, 40);
+                    miToas.show();
+                }
             }
         });
 

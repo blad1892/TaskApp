@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".vista.LoginActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,8 +19,12 @@
         <activity android:name=".vista.CategoriaListActivity" />
         <activity android:name=".vista.CategoriaActivity" />
         <activity android:name=".vista.LoginRegistroActivity" />
-        <activity android:name=".MainActivity"></activity>>
-        <activity android:name=".vista.ListaUsuario"></activity>
+        <activity android:name=".vista.MainActivity" />
+        <activity android:name=".vista.ListaUsuario" />
+        <activity android:name=".vista.TareaUsuarioTecnico" />
+        <activity android:name=".vista.ActivityListaAdapterTecnico" />
+        <activity android:name=".vista.TareaUsuarioNormal" />
+        <activity android:name=".vista.CrearTareas"></activity>
     </application>
 
 </manifest>

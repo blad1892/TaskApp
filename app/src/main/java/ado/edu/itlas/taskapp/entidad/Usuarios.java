@@ -1,10 +1,12 @@
 package ado.edu.itlas.taskapp.entidad;
 
+import java.io.Serializable;
+
 /**
  * Created by MESCyT on 7/7/2018.
  */
 
-public class Usuarios  {
+public class Usuarios implements Serializable {
     public enum TipoUsuario {
         TECNICO, NORMAL
     }
@@ -57,8 +59,8 @@ public class Usuarios  {
         this.contraceña = contracena;
     }
 
-    public String getTipoUsuario() {
-        return String.valueOf(tipoUsuario);
+    public TipoUsuario getTipoUsuario() {
+        return tipoUsuario;
     }
 
     public void setTipoUsuario(TipoUsuario tipoUsuario) {

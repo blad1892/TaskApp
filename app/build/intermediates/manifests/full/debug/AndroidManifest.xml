@@ -15,9 +15,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="ado.edu.itlas.taskapp.vista.LoginActivity" >
+        <activity android:name="ado.edu.itlas.taskapp.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,9 +26,12 @@
         <activity android:name="ado.edu.itlas.taskapp.vista.CategoriaListActivity" />
         <activity android:name="ado.edu.itlas.taskapp.vista.CategoriaActivity" />
         <activity android:name="ado.edu.itlas.taskapp.vista.LoginRegistroActivity" />
-        <activity android:name="ado.edu.itlas.taskapp.MainActivity" />
->
+        <activity android:name="ado.edu.itlas.taskapp.vista.MainActivity" />
         <activity android:name="ado.edu.itlas.taskapp.vista.ListaUsuario" />
+        <activity android:name="ado.edu.itlas.taskapp.vista.TareaUsuarioTecnico" />
+        <activity android:name="ado.edu.itlas.taskapp.vista.ActivityListaAdapterTecnico" />
+        <activity android:name="ado.edu.itlas.taskapp.vista.TareaUsuarioNormal" />
+        <activity android:name="ado.edu.itlas.taskapp.vista.CrearTareas" />
     </application>
 
 </manifest>

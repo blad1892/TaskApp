@@ -6,11 +6,11 @@ import java.util.List;
 import ado.edu.itlas.taskapp.entidad.Usuarios;
 
 public interface UsuarioRepositorio {
-    boolean guardar(Usuarios usuarios);
+    public boolean guardar(Usuarios usuarios);
 
-    int buscar(int id);
+    public Usuarios buscar(int id);
 
-    Usuarios buscarUser(String username);
+    public Usuarios buscarUser(String username);
 
-    List<Usuarios> buscar(String buscarTecnico);
+    public List<Usuarios> buscar(String buscarTecnico);
 }

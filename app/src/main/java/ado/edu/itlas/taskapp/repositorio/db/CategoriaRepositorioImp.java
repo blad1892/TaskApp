@@ -16,10 +16,11 @@ import ado.edu.itlas.taskapp.repositorio.CategoriaRepositorio;
  */
 
 public class CategoriaRepositorioImp implements CategoriaRepositorio {
-   private ConexionDb conexiodb;
+    private ConexionDb conexiodb;
 
-    private static final String CAMPO_NOMBRE="nombre";
-    private static  final  String  TABLA_CATEGORIA="categoria";
+    private static final String CAMPO_NOMBRE = "nombre";
+    private static final String TABLA_CATEGORIA = "categoria";
+
     public CategoriaRepositorioImp(Context context) {
         conexiodb = new ConexionDb(context);
     }
@@ -27,7 +28,7 @@ public class CategoriaRepositorioImp implements CategoriaRepositorio {
     @Override
     public boolean guardar(Categoria categoria) {
 
-        if (categoria.getId()!=null && categoria.getId()>0){
+        if (categoria.getId() != null && categoria.getId() > 0) {
             return actualizar(categoria);
         }
 

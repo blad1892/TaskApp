@@ -8,15 +8,14 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="356dp"
+        android:layout_width="368dp"
         android:layout_height="344dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.714"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.197"
+        app:layout_constraintVertical_bias="0.173"
         tools:ignore="MissingConstraints">
 
         <TextView
@@ -24,6 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/email"
+            android:layout_marginLeft="10dp"
             android:textColor="@android:color/black"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="21dp"
@@ -35,6 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:ems="10"
+            android:layout_marginLeft="10dp"
             android:hint="@string/email"
             android:inputType="textPersonName"
             tools:ignore="MissingConstraints"
@@ -46,6 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:text="@string/nombre"
+            android:layout_marginLeft="10dp"
             android:textColor="@android:color/black"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="21dp"
@@ -58,6 +60,7 @@
             android:layout_marginBottom="15dp"
             android:ems="10"
             android:hint="@string/nombre"
+            android:layout_marginLeft="10dp"
             android:inputType="textPersonName"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="21dp"
@@ -68,6 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/contrace_a"
+            android:layout_marginLeft="10dp"
             android:textColor="@android:color/black"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="21dp"
@@ -79,6 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:ems="10"
+            android:layout_marginLeft="10dp"
             android:hint="@string/contrace_confirmar_a"
             android:inputType="textPersonName"
             tools:ignore="MissingConstraints"
@@ -90,6 +95,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/comfirmar_contrace_a"
+            android:layout_marginLeft="10dp"
             android:textColor="@android:color/black"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="21dp"
@@ -101,6 +107,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:ems="10"
+            android:layout_marginLeft="10dp"
             android:hint="@string/confirmar_contrace_a"
             android:inputType="textPersonName"
             tools:ignore="MissingConstraints"
@@ -111,7 +118,7 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+            android:layout_marginLeft="10dp"
             android:text="@string/tpo_de_usuario"
             android:textColor="@android:color/black"
             tools:ignore="MissingConstraints"
@@ -121,49 +128,57 @@
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="368dp"
+        android:layout_width="351dp"
         android:layout_height="52dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.606"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         tools:ignore="MissingConstraints">
 
-        <RadioButton
-            android:id="@+id/rdTecnico"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="110dp"
-            android:layout_marginTop="10dp"
-            android:checked="false"
-            android:text="@string/tecnico"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="55dp"
-            tools:layout_editor_absoluteY="404dp" />
 
-        <RadioButton
-            android:id="@+id/rdNormal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/normal"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="228dp"
-            tools:layout_editor_absoluteY="404dp" />
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rdTecnico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="110dp"
+                android:layout_marginTop="10dp"
+                android:checked="false"
+                android:text="@string/tecnico"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="55dp"
+                tools:layout_editor_absoluteY="404dp" />
+
+            <RadioButton
+                android:id="@+id/rdNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/normal"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="228dp"
+                tools:layout_editor_absoluteY="404dp" />
+        </RadioGroup>
+        >
+
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="364dp"
+        android:layout_width="354dp"
         android:layout_height="64dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
         tools:ignore="MissingConstraints">
@@ -194,15 +209,14 @@
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        android:orientation="vertical" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        app:layout_constraintGuide_percent="0.010416667" />
 
     <android.support.constraint.Barrier
         android:id="@+id/barrier3"

@@ -35,8 +35,8 @@ public class CategoriaListActivity extends AppCompatActivity {
         catListView.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {
             @Override
-            public void onItemClick(AdapterView<?> adtarView, View view, int position, long id) {
-                Categoria cat = (Categoria) adtarView.getItemAtPosition(position);
+            public void onItemClick(AdapterView<?> adatarView, View view, int position, long id) {
+                Categoria cat = (Categoria) adatarView.getItemAtPosition(position);
 
                 Intent  regCatIntento = new Intent(CategoriaListActivity.this, CategoriaActivity.class);
                 regCatIntento.putExtra("categoria",cat);

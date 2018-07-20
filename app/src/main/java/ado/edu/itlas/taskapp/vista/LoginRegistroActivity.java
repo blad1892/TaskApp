@@ -53,11 +53,13 @@ public class LoginRegistroActivity extends AppCompatActivity {
                 usuarios.setConfirmarContraceña(txtConfirmarContraceña.getText().toString());
 
                 if (rdTecnico.isChecked()) {
-                    usuarios.setTipoUsuario("TECNICO");
+                    usuarios.setTipoUsuario(Usuarios.TipoUsuario.TECNICO);
                 } else if (rdNormal.isChecked()) {
-                    usuarios.setTipoUsuario("NORMAL");
+                    usuarios.setTipoUsuario(Usuarios.TipoUsuario.NORMAL);
                 }
-//                if (txtConfirmarContraceña.getText().toString()==txtContraceña.getText().toString()) {
+                String cont1=txtContraceña.getText().toString();
+                String cont2=txtConfirmarContraceña.getText().toString();
+               if (cont1.equals(cont2)) {
 
                     Log.i(LOC_TAG, usuarios.toString());
                     usuarioRepositorio.guardar(usuarios);
@@ -66,11 +68,12 @@ public class LoginRegistroActivity extends AppCompatActivity {
                     Toast miToas = Toast.makeText(LoginRegistroActivity.this, "Usuario Registrado", Toast.LENGTH_LONG);
                     miToas.setGravity(Gravity.CENTER, 20, 40);
                     miToas.show();
-//                } else {
-//                    Toast miToas = Toast.makeText(LoginRegistroActivity.this, "La contraceña no coisiden", Toast.LENGTH_LONG);
-//                    miToas.setGravity(Gravity.CENTER, 20, 40);
-//                    miToas.show();
-//                }
+
+               } else {
+                    Toast miToas = Toast.makeText(LoginRegistroActivity.this, "La contraceña no coiside", Toast.LENGTH_LONG);
+                    miToas.setGravity(Gravity.CENTER, 20, 40);
+                    miToas.show();
+               }
             }
         });
     }
