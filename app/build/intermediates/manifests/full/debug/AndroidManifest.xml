@@ -27,12 +27,13 @@
         <activity android:name="ado.edu.itlas.taskapp.vista.CategoriaActivity" />
         <activity android:name="ado.edu.itlas.taskapp.vista.LoginRegistroActivity" />
         <activity android:name="ado.edu.itlas.taskapp.vista.MainActivity" />
-        <activity android:name="ado.edu.itlas.taskapp.vista.ListaUsuario" />
+        <activity android:name="ado.edu.itlas.taskapp.vista.UsuarioLista" />
         <activity android:name="ado.edu.itlas.taskapp.vista.TareaUsuarioTecnico" />
         <activity android:name="ado.edu.itlas.taskapp.vista.ActivityListaAdapterTecnico" />
         <activity android:name="ado.edu.itlas.taskapp.vista.TareaUsuarioNormal" />
         <activity android:name="ado.edu.itlas.taskapp.vista.CrearTareas" />
         <activity android:name="ado.edu.itlas.taskapp.vista.MostrarTareaCreada" />
+        <activity android:name="ado.edu.itlas.taskapp.vista.UsuarioListaAdapter" />
     </application>
 
 </manifest>

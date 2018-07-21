@@ -47,6 +47,7 @@ public class CategoriaListAdapter extends BaseAdapter {
         // TODO: validar si view no es nulo
 
         if (view == null) {
+
             LayoutInflater inflater = LayoutInflater.from(contexto);
             view = inflater.inflate(R.layout.categoria_listaview_row, null, true);
 

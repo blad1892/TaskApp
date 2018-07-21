@@ -64,32 +64,7 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
 
     @Override
     public Usuarios buscar(int id) {
-        List<Usuarios> usuarios = new ArrayList<>();
 
-        SQLiteDatabase db = conexionDb.getReadableDatabase();
-        String[] columna = {"id", CAMPO_NOMBRE, CAMPO_EMAIL, CAMPO_CONTRACENA, CAMPO_TIPO_USUARIO};
-        Cursor cursor = db.query(TABLA_USUARIO, columna, null, null, null, null, null);
-        cursor.moveToFirst();
-
-        while (!cursor.isAfterLast()) {
-
-            id = cursor.getInt(cursor.getColumnIndex("id"));
-            String nombre = cursor.getString(cursor.getColumnIndex(CAMPO_NOMBRE));
-            String email = cursor.getString(cursor.getColumnIndex(CAMPO_EMAIL));
-            String contraceña = cursor.getString(cursor.getColumnIndex(CAMPO_CONTRACENA));
-            String tipoUsuario = cursor.getString(cursor.getColumnIndex(CAMPO_TIPO_USUARIO));
-
-            if (tipoUsuario == "TECNICO") {
-                usuarios.add(new Usuarios(id, nombre, email, contraceña, Usuarios.TipoUsuario.TECNICO));
-            } else if (tipoUsuario == "NORMAL") {
-                usuarios.add(new Usuarios(id, nombre, email, contraceña, Usuarios.TipoUsuario.NORMAL));
-            }
-
-            cursor.moveToNext();
-        }
-
-        db.close();
-        cursor.close();
 
         return null;
     }
@@ -119,38 +94,34 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
                 db.close();
                 cursor.close();
             }
-        }else {
+        } else {
             db.close();
             cursor.close();
 
         }
-// else {
-//            return null;
-//        }
 
-
-        return usuarios ;
+        return usuarios;
     }
 
     @Override
-    public List<Usuarios> buscar(String buscar) {
+    public List<Usuarios> buscar(String tecnico) {
 
         List<Usuarios> usuarios = new ArrayList<>();
-
+        String sql = "SELECT id, nombre, tipoUsuario FROM usuarios WHERE tipoUsuario = 'TECNICO'";
         SQLiteDatabase db = conexionDb.getReadableDatabase();
-        String[] colummas = {"id", CAMPO_NOMBRE, CAMPO_EMAIL, CAMPO_CONTRACENA, CAMPO_TIPO_USUARIO};
 
-        Cursor cursor = db.query(TABLA_USUARIO, colummas, null, null, null, null, null);
+
+        Cursor cursor = db.rawQuery(sql, null);
         cursor.moveToFirst();
 
         while (!cursor.isAfterLast()) {
             int id = cursor.getInt(cursor.getColumnIndex("id"));
             String nombre = cursor.getString(cursor.getColumnIndex(CAMPO_NOMBRE));
-            String email = cursor.getString(cursor.getColumnIndex(CAMPO_EMAIL));
-            String contraceña = cursor.getString(cursor.getColumnIndex(CAMPO_CONTRACENA));
+//            String email = cursor.getString(cursor.getColumnIndex(CAMPO_EMAIL));
+//            String contraceña = cursor.getString(cursor.getColumnIndex(CAMPO_CONTRACENA));
             String tipoUsuario = cursor.getString(cursor.getColumnIndex(CAMPO_TIPO_USUARIO));
 
-            usuarios.add(new Usuarios(id, nombre, email, contraceña, Usuarios.TipoUsuario.TECNICO));
+            usuarios.add(new Usuarios(null, nombre, null, null, Usuarios.TipoUsuario.TECNICO));
             cursor.moveToNext();
         }
         db.close();

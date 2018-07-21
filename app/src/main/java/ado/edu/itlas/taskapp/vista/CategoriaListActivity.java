@@ -19,7 +19,7 @@ public class CategoriaListActivity extends AppCompatActivity {
 
     private static final String log_Tac = "Categoria Lista View";
     private CategoriaRepositorio categoriaRepositorio;
-    Categoria categoria;
+//    Categoria categoria;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +36,7 @@ public class CategoriaListActivity extends AppCompatActivity {
         {
             @Override
             public void onItemClick(AdapterView<?> adatarView, View view, int position, long id) {
+
                 Categoria cat = (Categoria) adatarView.getItemAtPosition(position);
 
                 Intent  regCatIntento = new Intent(CategoriaListActivity.this, CategoriaActivity.class);

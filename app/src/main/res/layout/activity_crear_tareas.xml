@@ -47,7 +47,7 @@
 
         <Spinner
             android:id="@+id/spinerUsuarioTecnico"
-            android:layout_width="286dp"
+            android:layout_width="276dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="5pt"
@@ -71,7 +71,8 @@
             android:layout_marginLeft="40dp"
             android:layout_marginTop="5pt"
             android:ems="10"
-            android:inputType="textMultiLine" />
+            android:inputType="textMultiLine"
+            android:singleLine="true" />
 
 
     </LinearLayout>

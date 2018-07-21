@@ -18,10 +18,10 @@
 
         <TextView
             android:id="@+id/lblfecha"
-            android:layout_width="63dp"
+            android:layout_width="84dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="250dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="200pt"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:text="Fecha" />
 
@@ -31,47 +31,72 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:text="Categoria"
-            android:textColor="?android:attr/floatingToolbarForegroundColor" />
+            android:text="Categoria:"
+            android:textColor="@android:color/black" />
 
         <TextView
             android:id="@+id/txtCategoria"
             android:layout_width="174dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="5dp"
-            android:text="MostrarCategoria"
+            android:text="@string/mostrarcategoria"
             android:textColor="@android:color/black"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textView16"
-            android:layout_width="match_parent"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Asignado A:" />
 
         <TextView
-            android:id="@+id/textView17"
-            android:layout_width="match_parent"
+            android:id="@+id/lblUsuarioTecnico"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:text="Usuario"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textView18"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Estado:" />
 
         <TextView
-            android:id="@+id/textView19"
-            android:layout_width="match_parent"
+            android:id="@+id/lblEstado"
+            android:layout_width="138dp"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:text="Estado"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textView20"
-            android:layout_width="match_parent"
+            android:layout_width="93dp"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Descripcion" />
+
+        <TextView
+            android:id="@+id/lblDescripcion"
+            android:layout_width="297dp"
+            android:layout_height="106dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

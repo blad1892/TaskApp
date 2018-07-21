@@ -24,6 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/usuario"
+            android:layout_marginLeft="5dp"
             android:textColor="@android:color/black"
             android:textSize="14sp"
 
@@ -38,6 +39,7 @@
             android:layout_marginBottom="15dp"
             android:ems="10"
             android:hint="@string/usuario"
+            android:layout_marginLeft="5dp"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -51,6 +53,7 @@
             android:layout_height="wrap_content"
             android:text="@string/contrace_a"
             android:textColor="@android:color/black"
+            android:layout_marginLeft="5dp"
             android:textSize="14sp"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="37dp"
@@ -61,7 +64,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:layout_marginLeft="5dp"/>
 
 
     </LinearLayout>
