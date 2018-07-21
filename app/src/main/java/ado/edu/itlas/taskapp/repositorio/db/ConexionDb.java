@@ -16,7 +16,6 @@ public class ConexionDb extends SQLiteOpenHelper {
     private static final int VERSION_DB = 1;
 
 
-
     public ConexionDb(Context context) {
         super(context, NOMBRE_DB, null, VERSION_DB);
     }
@@ -27,11 +26,14 @@ public class ConexionDb extends SQLiteOpenHelper {
         db.execSQL(ExtructuraDb.TABLA_CATEGORIA);
         db.execSQL(ExtructuraDb.TABLA_USUARIO);
         db.execSQL(ExtructuraDb.TABLA_TAREAS);
-
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-
+    public void onUpgrade(SQLiteDatabase db, int versiionAntigua, int versionNueva) {
+        if (versiionAntigua == 1 && versionNueva > 1) {
+            db.execSQL(ExtructuraDb.TABLA_CATEGORIA);
+            db.execSQL(ExtructuraDb.TABLA_USUARIO);
+            db.execSQL(ExtructuraDb.TABLA_TAREAS);
+        }
     }
 }

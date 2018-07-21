@@ -6,8 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -44,6 +48,20 @@ public class CrearTareas extends AppCompatActivity {
         Spinner spinerUsuarioTecnico = (Spinner) findViewById(R.id.spinerUsuarioTecnico);
         spinerUsuarioTecnico.setAdapter(new UsuarioListaAdapter(this, usuarios));
 
+        EditText txtDescripcion = (EditText)findViewById(R.id.txtDescripcion);
 
+
+        Button btnGuardar=(Button)findViewById(R.id.btnGuardar);
+        btnGuardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+
+            }
+        });
     }
+
 }
+

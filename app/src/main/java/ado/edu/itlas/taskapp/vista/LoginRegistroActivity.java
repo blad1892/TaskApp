@@ -1,5 +1,6 @@
 package ado.edu.itlas.taskapp.vista;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +12,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import ado.edu.itlas.taskapp.LoginActivity;
 import ado.edu.itlas.taskapp.R;
 import ado.edu.itlas.taskapp.entidad.Usuarios;
 import ado.edu.itlas.taskapp.repositorio.UsuarioRepositorio;
@@ -57,23 +59,22 @@ public class LoginRegistroActivity extends AppCompatActivity {
                 } else if (rdNormal.isChecked()) {
                     usuarios.setTipoUsuario(Usuarios.TipoUsuario.NORMAL);
                 }
-                String cont1=txtContraceña.getText().toString();
-                String cont2=txtConfirmarContraceña.getText().toString();
-               if (cont1.equals(cont2)) {
+                String cont1 = txtContraceña.getText().toString();
+                String cont2 = txtConfirmarContraceña.getText().toString();
+                if (cont1.equals(cont2)) {
 
                     Log.i(LOC_TAG, usuarios.toString());
                     usuarioRepositorio.guardar(usuarios);
                     Log.i(LOC_TAG, usuarios.toString());
 
-                    Toast miToas = Toast.makeText(LoginRegistroActivity.this, "Usuario Registrado", Toast.LENGTH_LONG);
-                    miToas.setGravity(Gravity.CENTER, 20, 40);
-                    miToas.show();
+                    Intent intent = new Intent(LoginRegistroActivity.this, LoginActivity.class);
+                    startActivity(intent);
 
-               } else {
+                } else {
                     Toast miToas = Toast.makeText(LoginRegistroActivity.this, "La contraceña no coiside", Toast.LENGTH_LONG);
                     miToas.setGravity(Gravity.CENTER, 20, 40);
                     miToas.show();
-               }
+                }
             }
         });
     }

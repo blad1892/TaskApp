@@ -97,7 +97,6 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
         } else {
             db.close();
             cursor.close();
-
         }
 
         return usuarios;
@@ -107,21 +106,23 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
     public List<Usuarios> buscar(String tecnico) {
 
         List<Usuarios> usuarios = new ArrayList<>();
-        String sql = "SELECT id, nombre, tipoUsuario FROM usuarios WHERE tipoUsuario = 'TECNICO'";
+//        String sql = "SELECT id, nombre, tipoUsuario FROM usuarios WHERE tipoUsuario = 'TECNICO'";
         SQLiteDatabase db = conexionDb.getReadableDatabase();
+        String[] columna = {"id", CAMPO_NOMBRE, CAMPO_EMAIL, CAMPO_CONTRACENA, CAMPO_TIPO_USUARIO};
 
-
-        Cursor cursor = db.rawQuery(sql, null);
+        Cursor cursor = db.query(TABLA_USUARIO, columna, null, null, null, null, null);
         cursor.moveToFirst();
 
         while (!cursor.isAfterLast()) {
             int id = cursor.getInt(cursor.getColumnIndex("id"));
             String nombre = cursor.getString(cursor.getColumnIndex(CAMPO_NOMBRE));
-//            String email = cursor.getString(cursor.getColumnIndex(CAMPO_EMAIL));
-//            String contraceña = cursor.getString(cursor.getColumnIndex(CAMPO_CONTRACENA));
+            String email = cursor.getString(cursor.getColumnIndex(CAMPO_EMAIL));
+            String contraceña = cursor.getString(cursor.getColumnIndex(CAMPO_CONTRACENA));
             String tipoUsuario = cursor.getString(cursor.getColumnIndex(CAMPO_TIPO_USUARIO));
 
-            usuarios.add(new Usuarios(null, nombre, null, null, Usuarios.TipoUsuario.TECNICO));
+            if (tipoUsuario.equals("TECNICO")) {
+                usuarios.add(new Usuarios(id, nombre, email, contraceña, Usuarios.TipoUsuario.TECNICO));
+            }
             cursor.moveToNext();
         }
         db.close();

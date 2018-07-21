@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
@@ -36,24 +37,21 @@ public class UsuarioListaAdapter extends BaseAdapter {
     }
 
     @Override
-    public long getItemId(int position) {
-        return usuarios.get(position).getId();
+    public long getItemId(int i) {
+        return usuarios.get(i).getId();
     }
 
     @Override
     public View getView(int i, View convertView, ViewGroup parent) {
 
-        if (context.equals(CrearTareas.class)) {
             LayoutInflater inflater = LayoutInflater.from(context);
             convertView = inflater.inflate(R.layout.activity_usuario_lista_adapter, null, true);
 
             TextView lblNombre = convertView.findViewById(R.id.lblNombreUsuario);
+
             Usuarios user = usuarios.get(i);
             lblNombre.setText(user.getNombre());
-            return convertView;
-        }
 
-
-        return convertView;
+        return lblNombre;
     }
 }

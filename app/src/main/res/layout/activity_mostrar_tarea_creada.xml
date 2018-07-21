@@ -20,7 +20,7 @@
             android:id="@+id/lblfecha"
             android:layout_width="84dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="200pt"
+            android:layout_marginLeft="200dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:text="Fecha" />

@@ -11,7 +11,7 @@ public interface TareasRepositorio{
 
     public Tareas buscar(int id);
 
-    public Tareas buscarTareas(String username);
+    public List<Tareas> buscarAsignadoA(Usuarios usuarios);
 
-    public List<Tareas> buscar(String buscar);
+    public List<Tareas> buscarCreadoPor(Usuarios usuarios);
 }
