@@ -28,6 +28,12 @@
             android:layout_height="wrap_content"
             android:text="@string/mostrar_lista_categoria" />
 
+        <Button
+            android:id="@+id/btnListaUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lista Usuarios" />
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

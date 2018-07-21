@@ -38,11 +38,11 @@ public class CrearTareas extends AppCompatActivity {
         Spinner spinerCategoria = (Spinner) findViewById(R.id.spinerCategoria);
         spinerCategoria.setAdapter(new CategoriaListAdapter(this, categorias));
 
-//        usuarioRepositorio=new UsuarioRepositorioImp(this);
-//       List<Usuarios>usuarios=usuarioRepositorio.buscar(null);
+        usuarioRepositorio = new UsuarioRepositorioImp(this);
+        List<Usuarios> usuarios = usuarioRepositorio.buscar(null);
 
-//       Spinner spinerUsuarioTecnico=(Spinner)findViewById(R.id.spinerUsuarioTecnico);
-//       spinerUsuarioTecnico.setAdapter(new UsuarioListaAdapter(this,usuarios));
+        Spinner spinerUsuarioTecnico = (Spinner) findViewById(R.id.spinerUsuarioTecnico);
+        spinerUsuarioTecnico.setAdapter(new UsuarioListaAdapter(this, usuarios));
 
 
     }

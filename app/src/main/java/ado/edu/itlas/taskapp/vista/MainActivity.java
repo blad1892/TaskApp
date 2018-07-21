@@ -35,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(inten);
             }
         });
+        Button btnListaUsuario = (Button) findViewById(R.id.btnListaUsuario);
+        btnListaUsuario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent inten= new Intent(MainActivity.this, UsuarioLista.class);
+                startActivity(inten);
+            }
+        });
     }
 
 }

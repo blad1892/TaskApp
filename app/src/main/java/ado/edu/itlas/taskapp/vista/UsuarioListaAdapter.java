@@ -41,18 +41,17 @@ public class UsuarioListaAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int i, View convertView, ViewGroup parent) {
 
-        if(context.equals(CrearTareas.class)){
-            LayoutInflater inflater= LayoutInflater.from(context);
-            convertView=inflater.inflate(R.layout.activity_usuario_lista_adapter,null,true);
+        if (context.equals(CrearTareas.class)) {
+            LayoutInflater inflater = LayoutInflater.from(context);
+            convertView = inflater.inflate(R.layout.activity_usuario_lista_adapter, null, true);
 
             TextView lblNombre = convertView.findViewById(R.id.lblNombreUsuario);
-            Usuarios user=usuarios.get(position);
+            Usuarios user = usuarios.get(i);
             lblNombre.setText(user.getNombre());
             return convertView;
         }
-
 
 
         return convertView;
