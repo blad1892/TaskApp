@@ -51,8 +51,8 @@ public class LoginRegistroActivity extends AppCompatActivity {
                 }
                 usuarios.setEmail(txtEmail.getText().toString());
                 usuarios.setNombre(txtNombre.getText().toString());
-                usuarios.setContraceña(txtContraceña.getText().toString());
-                usuarios.setConfirmarContraceña(txtConfirmarContraceña.getText().toString());
+                usuarios.setContracena(txtContraceña.getText().toString());
+                usuarios.setConfirmarContracena(txtConfirmarContraceña.getText().toString());
 
                 if (rdTecnico.isChecked()) {
                     usuarios.setTipoUsuario(Usuarios.TipoUsuario.TECNICO);

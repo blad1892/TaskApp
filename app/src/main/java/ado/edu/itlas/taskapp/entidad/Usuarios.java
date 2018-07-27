@@ -18,8 +18,17 @@ public class Usuarios implements Serializable {
     private String contracena;
     private String confirmarContracena;
     private TipoUsuario tipoUsuario;
+    private String loguiado;
+    public String getLoguiado() {
 
-    public String getConfirmarContraceña() {
+        return loguiado;
+    }
+
+    public void setLoguiado(String loguiado) {
+        this.loguiado = loguiado;
+    }
+
+    public String getConfirmarContracena() {
         return confirmarContracena;
     }
 
@@ -67,12 +76,14 @@ public class Usuarios implements Serializable {
         this.tipoUsuario = tipoUsuario;
     }
 
-    public Usuarios(Integer id, String nombre, String email, String contraceña, TipoUsuario tipoUsuario) {
+    public Usuarios(Integer id, String nombre, String email, String contracena, String confirmarContracena, TipoUsuario tipoUsuario, String loguiado) {
         this.id = id;
         this.nombre = nombre;
         this.email = email;
         this.contracena = contracena;
-       this.tipoUsuario = tipoUsuario;
+        this.confirmarContracena = confirmarContracena;
+        this.tipoUsuario = tipoUsuario;
+        this.loguiado = loguiado;
     }
 
     @Override
@@ -83,7 +94,8 @@ public class Usuarios implements Serializable {
                 ", email='" + email + '\'' +
                 ", contracena='" + contracena + '\'' +
                 ", confirmarContracena='" + confirmarContracena + '\'' +
-                ", tipoUsuario='" + tipoUsuario + '\'' +
+                ", tipoUsuario=" + tipoUsuario +
+                ", loguiado='" + loguiado + '\'' +
                 '}';
     }
 }
