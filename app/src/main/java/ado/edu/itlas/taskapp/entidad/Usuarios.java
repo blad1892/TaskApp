@@ -15,16 +15,16 @@ public class Usuarios implements Serializable {
     private Integer id;
     private String nombre;
     private String email;
-    private String contraceña;
-    private String confirmarContraceña;
+    private String contracena;
+    private String confirmarContracena;
     private TipoUsuario tipoUsuario;
 
     public String getConfirmarContraceña() {
-        return confirmarContraceña;
+        return confirmarContracena;
     }
 
-    public void setConfirmarContraceña(String confirmarContraceña) {
-        this.confirmarContraceña = confirmarContraceña;
+    public void setConfirmarContracena(String confirmarContracena) {
+        this.confirmarContracena = confirmarContracena;
     }
 
     public Integer getId() {
@@ -52,11 +52,11 @@ public class Usuarios implements Serializable {
     }
 
     public String getContracena() {
-        return contraceña;
+        return contracena;
     }
 
-    public void setContraceña(String contracena) {
-        this.contraceña = contracena;
+    public void setContracena(String contracena) {
+        this.contracena = contracena;
     }
 
     public TipoUsuario getTipoUsuario() {
@@ -71,7 +71,7 @@ public class Usuarios implements Serializable {
         this.id = id;
         this.nombre = nombre;
         this.email = email;
-        this.contraceña = contraceña;
+        this.contracena = contracena;
        this.tipoUsuario = tipoUsuario;
     }
 
@@ -81,8 +81,8 @@ public class Usuarios implements Serializable {
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", email='" + email + '\'' +
-                ", contraceña='" + contraceña + '\'' +
-                ", confirmarContraceña='" + confirmarContraceña + '\'' +
+                ", contracena='" + contracena + '\'' +
+                ", confirmarContracena='" + confirmarContracena + '\'' +
                 ", tipoUsuario='" + tipoUsuario + '\'' +
                 '}';
     }

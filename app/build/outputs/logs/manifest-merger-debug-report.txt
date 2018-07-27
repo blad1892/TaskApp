@@ -1,168 +1,168 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-32:12
-MERGED from [com.android.support:design:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\f8363e24fd210a2f756146435bf7444b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\bbcac4abed8a66b29d8987fdb19e653f\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\0c31c26b9e56e7173b087f5293df8da4\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:gridlayout-v7:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\gridlayout-v7-27.1.1.aar\acd7b8371981d8b081c21b3e1dd3d19f\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\ea114f85c369c79c8358065bada68c51\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\b4d5cff40e66041415eb94aebc2ecad9\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\11b8df56d0de55935aacb67c10a43b98\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\d291c3e233c273fb762bc84a39de68f9\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\118a707e08933dbb1e1f280b130cc451\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\e76614fff81c9d4f7387edffa259a5cb\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\e02f4f04e6faee898506c690b53c312a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\9e1897c9848f96f4d4f96bdc259c8af1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\10d1bcee61bdacebe1e0291abda2471c\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\064ee94f71e894811aadcd13bbe04444\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\41daa7b20205044d545944bbfb79c98f\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\57b91f8feab65c24f4fa8a1c8fb07a4c\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\092646387727c6643d3307ed44c79b51\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\f0bc1784d27748fdd16ea480ae0883e9\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\1a7922f958d3e7cfe3f41f1961b67d41\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-32:12
+ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-32:12
+MERGED from [com.android.support:design:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\17b308be7d762e5ba4f4794287dfec37\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\97eb50ae5457ef434ce86a6ab5460896\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\de1a326ba60e0f97df5772aa6c9c5390\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:gridlayout-v7:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\gridlayout-v7-27.1.1.aar\9349ba40c57ab348865e9860ff7102be\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\89b962effc34601ac1777369a9413a5b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\79345946acddd663ca9b0879d91beca5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\d9891d556bc8876722889ba1ee76d2f8\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\4e538b4d113e9aaeb0fe2a33a388d40c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\e6e649716bdcc285e92ffb73d0d85044\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\0c22b8564e06627b61b664462a43cd0c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\6e6af552ca72394b87fb8cd99cd93d73\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\bc18b246a2697163f790157ee896a1a0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\51f65a6277f390739e847572a4c4268d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\e9f651764609b0a271d20bf1dc8f02e1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\d10f49cb3714192334ee069030c67121\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\4b58b7a523841fe7eb478f5c3cdc1fc0\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\fd4cb0d504b1e1479c4a08a8fd7aed49\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b80d0c9b6172f99118a8a1094cfe409b\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\d6701066c78918669fe898c8a10a42d4\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-32:12
 	package
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:3:5-36
-		INJECTED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:3:5-36
+		INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-32:12
-		INJECTED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-32:12
+		INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-32:12
-		INJECTED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:1-32:12
+		INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:5:5-30:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\0c31c26b9e56e7173b087f5293df8da4\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\0c31c26b9e56e7173b087f5293df8da4\AndroidManifest.xml:9:5-20
+ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:5:5-30:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\de1a326ba60e0f97df5772aa6c9c5390\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\de1a326ba60e0f97df5772aa6c9c5390\AndroidManifest.xml:9:5-20
 	android:supportsRtl
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:8:9-41
 	android:roundIcon
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:7:9-43
 	android:allowBackup
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:11:9-40
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:11:9-40
 activity#ado.edu.itlas.taskapp.LoginActivity
-ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:12:9-18:20
+ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:12:9-18:20
 	android:name
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:12:19-48
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:12:19-48
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:13:13-17:29
+ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:13:13-17:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:14:17-69
+ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:14:17-69
 	android:name
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:14:25-66
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:14:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:16:17-77
+ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:16:17-77
 	android:name
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:16:27-74
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:16:27-74
 activity#ado.edu.itlas.taskapp.vista.CategoriaListActivity
-ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:19:9-65
+ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:19:9-65
 	android:name
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:19:19-62
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:19:19-62
 activity#ado.edu.itlas.taskapp.vista.CategoriaActivity
-ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:20:9-61
+ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:20:9-61
 	android:name
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:20:19-58
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:20:19-58
 activity#ado.edu.itlas.taskapp.vista.LoginRegistroActivity
-ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:21:9-65
+ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:21:9-65
 	android:name
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:21:19-62
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:21:19-62
 activity#ado.edu.itlas.taskapp.vista.MainActivity
-ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:22:9-56
+ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:22:9-56
 	android:name
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:22:19-53
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:22:19-53
 activity#ado.edu.itlas.taskapp.vista.UsuarioLista
-ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:23:9-56
+ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:23:9-56
 	android:name
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:23:19-53
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:23:19-53
 activity#ado.edu.itlas.taskapp.vista.TareaUsuarioTecnico
-ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:24:9-63
+ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:24:9-63
 	android:name
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:24:19-60
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:24:19-60
 activity#ado.edu.itlas.taskapp.vista.ActivityListaAdapterTecnico
-ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:25:9-71
+ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:25:9-71
 	android:name
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:25:19-68
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:25:19-68
 activity#ado.edu.itlas.taskapp.vista.TareaUsuarioNormal
-ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:26:9-62
+ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:26:9-62
 	android:name
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:26:19-59
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:26:19-59
 activity#ado.edu.itlas.taskapp.vista.CrearTareas
-ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:27:9-55
+ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:27:9-55
 	android:name
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:27:19-52
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:27:19-52
 activity#ado.edu.itlas.taskapp.vista.MostrarTareaCreada
-ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:28:9-62
+ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:28:9-62
 	android:name
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:28:19-59
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:28:19-59
 activity#ado.edu.itlas.taskapp.vista.UsuarioListaAdapter
-ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:29:9-72
+ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:29:9-63
 	android:name
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:29:19-60
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml:29:19-60
 uses-sdk
-INJECTED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:design:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\f8363e24fd210a2f756146435bf7444b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\f8363e24fd210a2f756146435bf7444b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\bbcac4abed8a66b29d8987fdb19e653f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\bbcac4abed8a66b29d8987fdb19e653f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\0c31c26b9e56e7173b087f5293df8da4\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\0c31c26b9e56e7173b087f5293df8da4\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:gridlayout-v7:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\gridlayout-v7-27.1.1.aar\acd7b8371981d8b081c21b3e1dd3d19f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:gridlayout-v7:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\gridlayout-v7-27.1.1.aar\acd7b8371981d8b081c21b3e1dd3d19f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\ea114f85c369c79c8358065bada68c51\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\ea114f85c369c79c8358065bada68c51\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\b4d5cff40e66041415eb94aebc2ecad9\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\b4d5cff40e66041415eb94aebc2ecad9\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\11b8df56d0de55935aacb67c10a43b98\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\11b8df56d0de55935aacb67c10a43b98\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\d291c3e233c273fb762bc84a39de68f9\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\d291c3e233c273fb762bc84a39de68f9\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\118a707e08933dbb1e1f280b130cc451\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\118a707e08933dbb1e1f280b130cc451\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\e76614fff81c9d4f7387edffa259a5cb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\e76614fff81c9d4f7387edffa259a5cb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\e02f4f04e6faee898506c690b53c312a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\e02f4f04e6faee898506c690b53c312a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\9e1897c9848f96f4d4f96bdc259c8af1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\9e1897c9848f96f4d4f96bdc259c8af1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\10d1bcee61bdacebe1e0291abda2471c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\10d1bcee61bdacebe1e0291abda2471c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\064ee94f71e894811aadcd13bbe04444\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\064ee94f71e894811aadcd13bbe04444\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\41daa7b20205044d545944bbfb79c98f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\41daa7b20205044d545944bbfb79c98f\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\57b91f8feab65c24f4fa8a1c8fb07a4c\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\57b91f8feab65c24f4fa8a1c8fb07a4c\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\092646387727c6643d3307ed44c79b51\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\092646387727c6643d3307ed44c79b51\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\f0bc1784d27748fdd16ea480ae0883e9\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\f0bc1784d27748fdd16ea480ae0883e9\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\1a7922f958d3e7cfe3f41f1961b67d41\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\MESCyT\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\1a7922f958d3e7cfe3f41f1961b67d41\AndroidManifest.xml:20:5-44
-INJECTED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\17b308be7d762e5ba4f4794287dfec37\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\17b308be7d762e5ba4f4794287dfec37\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\97eb50ae5457ef434ce86a6ab5460896\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\97eb50ae5457ef434ce86a6ab5460896\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\de1a326ba60e0f97df5772aa6c9c5390\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\de1a326ba60e0f97df5772aa6c9c5390\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:gridlayout-v7:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\gridlayout-v7-27.1.1.aar\9349ba40c57ab348865e9860ff7102be\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:gridlayout-v7:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\gridlayout-v7-27.1.1.aar\9349ba40c57ab348865e9860ff7102be\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\89b962effc34601ac1777369a9413a5b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\89b962effc34601ac1777369a9413a5b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\79345946acddd663ca9b0879d91beca5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\79345946acddd663ca9b0879d91beca5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\d9891d556bc8876722889ba1ee76d2f8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\d9891d556bc8876722889ba1ee76d2f8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\4e538b4d113e9aaeb0fe2a33a388d40c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\4e538b4d113e9aaeb0fe2a33a388d40c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\e6e649716bdcc285e92ffb73d0d85044\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\e6e649716bdcc285e92ffb73d0d85044\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\0c22b8564e06627b61b664462a43cd0c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\0c22b8564e06627b61b664462a43cd0c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\6e6af552ca72394b87fb8cd99cd93d73\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\6e6af552ca72394b87fb8cd99cd93d73\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\bc18b246a2697163f790157ee896a1a0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\bc18b246a2697163f790157ee896a1a0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\51f65a6277f390739e847572a4c4268d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\51f65a6277f390739e847572a4c4268d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\e9f651764609b0a271d20bf1dc8f02e1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\e9f651764609b0a271d20bf1dc8f02e1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\d10f49cb3714192334ee069030c67121\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\d10f49cb3714192334ee069030c67121\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\4b58b7a523841fe7eb478f5c3cdc1fc0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\4b58b7a523841fe7eb478f5c3cdc1fc0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\fd4cb0d504b1e1479c4a08a8fd7aed49\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\fd4cb0d504b1e1479c4a08a8fd7aed49\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b80d0c9b6172f99118a8a1094cfe409b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b80d0c9b6172f99118a8a1094cfe409b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\d6701066c78918669fe898c8a10a42d4\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\bladimir rojas\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\d6701066c78918669fe898c8a10a42d4\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\MESCyT\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\bladimir rojas\Desktop\prjAndroid\TaskApp\app\src\main\AndroidManifest.xml

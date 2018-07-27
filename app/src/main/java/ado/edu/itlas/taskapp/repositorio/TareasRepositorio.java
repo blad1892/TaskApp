@@ -7,7 +7,7 @@ import ado.edu.itlas.taskapp.entidad.Tareas;
 import ado.edu.itlas.taskapp.entidad.Usuarios;
 
 public interface TareasRepositorio{
-    public boolean guardar(Usuarios usuarios);
+    public boolean guardar(Tareas tareas);
 
     public Tareas buscar(int id);
 

@@ -1,9 +1,15 @@
 package ado.edu.itlas.taskapp.repositorio.db;
 
+import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.CharArrayBuffer;
+import android.database.ContentObserver;
 import android.database.Cursor;
+import android.database.DataSetObserver;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
+import android.os.Bundle;
 import android.view.Gravity;
 import android.widget.Toast;
 
@@ -64,18 +70,32 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
 
     @Override
     public Usuarios buscar(int id) {
+        String sql = "SELECT * FROM usuarios WHERE nombre = '" + usuarios.getNombre() + "'";
+        SQLiteDatabase db = conexionDb.getReadableDatabase();
+        Cursor cursor = db.rawQuery(sql, null);
+        int i;
+        if (cursor.moveToFirst()) {
+            while (!cursor.isAfterLast()) {
+                id = cursor.getInt(cursor.getColumnIndex("id"));
+                String tipUsuario = cursor.getString(cursor.getColumnIndex(CAMPO_NOMBRE));
 
-
+                if (tipUsuario.equals("TECNICO")) {
+                    usuarios.setId(id);
+                    return usuarios;
+                } else {
+                    cursor.moveToNext();
+                }
+            }
+        }
         return null;
     }
+
 
     public Usuarios buscarUser(String username) {//Este metodo estaba de la siguiente manera public Usuarios buscarUser(String username)
         Usuarios usuarios = null;
         String sql = "SELECT * FROM usuarios WHERE nombre ='" + username + "'";
         SQLiteDatabase db = conexionDb.getReadableDatabase();
 //        String[] columnas = {"id", CAMPO_NOMBRE, CAMPO_EMAIL, CAMPO_CONTRACENA, CAMPO_TIPO_USUARIO};
-
-//        Cursor cursor = db.query(TABLA_USUARIO, columnas, null, null, null, null, null);
         Cursor cursor = db.rawQuery(sql, null);
         if (cursor.moveToFirst()) {
 

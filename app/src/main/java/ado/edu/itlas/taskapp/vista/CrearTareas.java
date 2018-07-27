@@ -13,7 +13,12 @@ import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.LocalDate;
 import java.util.List;
+import java.util.Locale;
 
 import ado.edu.itlas.taskapp.R;
 import ado.edu.itlas.taskapp.entidad.Categoria;
@@ -39,7 +44,7 @@ public class CrearTareas extends AppCompatActivity {
         categoriaRepositorio = new CategoriaRepositorioImp(this);
         List<Categoria> categorias = categoriaRepositorio.buscar(null);
 
-        Spinner spinerCategoria = (Spinner) findViewById(R.id.spinerCategoria);
+        final Spinner spinerCategoria = (Spinner) findViewById(R.id.spinerCategoria);
         spinerCategoria.setAdapter(new CategoriaListAdapter(this, categorias));
 
         usuarioRepositorio = new UsuarioRepositorioImp(this);
@@ -48,14 +53,27 @@ public class CrearTareas extends AppCompatActivity {
         Spinner spinerUsuarioTecnico = (Spinner) findViewById(R.id.spinerUsuarioTecnico);
         spinerUsuarioTecnico.setAdapter(new UsuarioListaAdapter(this, usuarios));
 
-        EditText txtDescripcion = (EditText)findViewById(R.id.txtDescripcion);
+        final EditText txtDescripcion = (EditText)findViewById(R.id.txtDescripcion);
 
 
-        Button btnGuardar=(Button)findViewById(R.id.btnGuardar);
+        final Button btnGuardar=(Button)findViewById(R.id.btnGuardar);
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                btnGuardar.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+
+
+                        tareas.setCategoria(categoria.setNombre(spinerCategoria.getSelectedItem().toString()));
+                      tareas.setDescripcion(txtDescripcion.getText().toString());
+                      tareas.setEstado(Tareas.TareaEstado.PENDIENTE);
+//                      tareas.set
+
+                    }
+                });
 
 
 
