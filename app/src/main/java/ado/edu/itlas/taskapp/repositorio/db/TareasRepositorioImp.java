@@ -1,33 +1,24 @@
 package ado.edu.itlas.taskapp.repositorio.db;
 
-import android.content.ContentResolver;
 import android.content.ContentValues;
-import android.content.Intent;
-import android.database.CharArrayBuffer;
-import android.database.ContentObserver;
 import android.database.Cursor;
-import android.database.DataSetObserver;
 import android.database.sqlite.SQLiteDatabase;
-import android.net.Uri;
-import android.os.Bundle;
-import android.widget.Switch;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 import ado.edu.itlas.taskapp.entidad.Categoria;
 import ado.edu.itlas.taskapp.entidad.Tareas;
-import ado.edu.itlas.taskapp.entidad.Usuarios;
+import ado.edu.itlas.taskapp.entidad.Usuario;
 import ado.edu.itlas.taskapp.repositorio.TareasRepositorio;
 
 public class TareasRepositorioImp implements TareasRepositorio {
     ConexionDb conexionDb;
     Tareas tareas;
-    Categoria categoria;
-    Usuarios usuarios;
+    Categoria categoria = new Categoria();
+    Usuario usuarios;
     private final static String TABLE_TAREAS = "tareas";
     private final static String CAMPO_NOMBRE = "nombre";
     private final static String CAMPO_DESCRIPCION = "descripcion";
@@ -44,14 +35,15 @@ public class TareasRepositorioImp implements TareasRepositorio {
         cv.put(CAMPO_NOMBRE, tareas.getNombre());
         cv.put(CAMPO_DESCRIPCION, tareas.getDescripcion());
         cv.put(CAMPO_FECHA, tareas.getFecha().toString());
-        cv.put(CAMPO_FECHA_TERMINADO, tareas.getFechaTerminado().toString());
+//        cv.put(CAMPO_FECHA_TERMINADO, );
         cv.put(CAMPOR_ESTADO, tareas.getEstado().toString());
         cv.put(CAMPO_CATEGORIA, categoria.getNombre());
-        cv.put(CAMPO_USUARIO_CREADOR, tareas.getUsuarioCreador());
-        cv.put(CAMPO_USUARIO_ASIGNADO, tareas.getUsuarioAsignado());
+//        cv.put(CAMPO_USUARIO_CREADOR, tareas.getUsuarioCreador());
+//        cv.put(CAMPO_USUARIO_ASIGNADO, tareas.getUsuarioAsignado());
 
 
-        SQLiteDatabase db = conexionDb.getWritableDatabase();
+        SQLiteDatabase db =  conexionDb.getWritableDatabase();
+
         Long i = db.insert(TABLE_TAREAS, null, cv);
         if (i.intValue() > 0) {
             tareas.setId(i.intValue());
@@ -62,9 +54,6 @@ public class TareasRepositorioImp implements TareasRepositorio {
         return false;
     }
 
-    enum estad {
-        PENDIENTE, PROCESO, TERMINADO;
-    }
 
     @Override
     public Tareas buscar(int idTarea) {
@@ -94,15 +83,15 @@ public class TareasRepositorioImp implements TareasRepositorio {
             }
             switch (estado) {
                 case "PENDIENTE": {
-                    tareas = new Tareas(id, nombre, descripcion, date, null, Tareas.TareaEstado.PENDIENTE, categoria, usuarioCreador, usuarioAsignado);
+//                    tareas = new Tareas(id, nombre, descripcion, date, null, Tareas.TareaEstado.PENDIENTE, categoria, usuarioCreador, usuarioAsignado);
                     break;
                 }
                 case "EN_PROCESO": {
-                    tareas = new Tareas(id, nombre, descripcion, date, null, Tareas.TareaEstado.EN_PROCESO, categoria, usuarioCreador, usuarioAsignado);
+//                    tareas = new Tareas(id, nombre, descripcion, date, null, Tareas.TareaEstado.EN_PROCESO, categoria, usuarioCreador, usuarioAsignado);
                     break;
                 }
                 case "TERMINADO": {
-                    tareas = new Tareas(id, nombre, descripcion, date, null, Tareas.TareaEstado.TERMINADO, categoria, usuarioCreador, usuarioAsignado);
+//                    tareas = new Tareas(id, nombre, descripcion, date, null, Tareas.TareaEstado.TERMINADO, categoria, usuarioCreador, usuarioAsignado);
                     break;
                 }
             }
@@ -112,12 +101,12 @@ public class TareasRepositorioImp implements TareasRepositorio {
     }
 
     @Override
-    public List<Tareas> buscarAsignadoA(Usuarios usuarios) {
+    public List<Tareas> buscarAsignadoA(Usuario usuarios) {
         return null;
     }
 
     @Override
-    public List<Tareas> buscarCreadoPor(Usuarios usuarios) {
+    public List<Tareas> buscarCreadoPor(Usuario usuarios) {
         return null;
     }
 }

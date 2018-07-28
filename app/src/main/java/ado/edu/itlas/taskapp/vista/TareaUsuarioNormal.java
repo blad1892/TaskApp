@@ -8,22 +8,23 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import ado.edu.itlas.taskapp.R;
-import ado.edu.itlas.taskapp.entidad.Usuarios;
+import ado.edu.itlas.taskapp.entidad.Usuario;
 import ado.edu.itlas.taskapp.repositorio.UsuarioRepositorio;
 import ado.edu.itlas.taskapp.repositorio.db.UsuarioRepositorioImp;
 
 public class TareaUsuarioNormal extends AppCompatActivity {
-    Usuarios usuarios;
+    Usuario usuarios;
     UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorioImp(this);
-int cont;
+    int cont;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tarea_usuario_normal);
 
-        TextView lblUsuario = (TextView) findViewById(R.id.lblUsuario);
-        cont+=1;
-        if(cont==1) {
+        final TextView lblUsuario = (TextView) findViewById(R.id.lblUsuario);
+        cont += 1;
+        if (cont == 1) {
             usuarios = usuarioRepositorio.usuarioLoguiado();
             lblUsuario.setText(usuarios.getNombre().toString());
         }
@@ -33,6 +34,7 @@ int cont;
             @Override
             public void onClick(View v) {
                 Intent intento = new Intent(TareaUsuarioNormal.this, CrearTareas.class);
+                intento.putExtra("usuario",lblUsuario.getText());
                 startActivity(intento);
             }
         });

@@ -31,9 +31,9 @@ public class ConexionDb extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int versiionAntigua, int versionNueva) {
         Log.i(LOG_TAB, "Actualizando la base de datos");
-            db.execSQL(ExtructuraDb.TABLA_CATEGORIA);
-            db.execSQL(ExtructuraDb.TABLA_USUARIO);
-            db.execSQL(ExtructuraDb.TABLA_TAREAS);
+        db.execSQL(ExtructuraDb.TABLA_CATEGORIA);
+        db.execSQL(ExtructuraDb.TABLA_USUARIO);
+        db.execSQL(ExtructuraDb.TABLA_TAREAS);
 
     }
 }

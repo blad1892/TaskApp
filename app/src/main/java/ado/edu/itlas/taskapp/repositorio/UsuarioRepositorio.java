@@ -1,21 +1,18 @@
 package ado.edu.itlas.taskapp.repositorio;
 
-import android.icu.lang.UScript;
-
 import java.util.List;
 
 
-import ado.edu.itlas.taskapp.entidad.Tareas;
-import ado.edu.itlas.taskapp.entidad.Usuarios;
+import ado.edu.itlas.taskapp.entidad.Usuario;
 
 public interface UsuarioRepositorio {
-    public boolean guardar(Usuarios usuarios);
+    public boolean guardar(Usuario usuarios);
 
-    public Usuarios buscar(int id);
+    public Usuario buscar(int id);
 
-    public Usuarios buscarUser(String username);
+    public Usuario buscarUser(String username);
 
-    public List<Usuarios> buscar(String tecnico);
+    public List<Usuario> buscar(String tecnico);
     public boolean loguiarUsuario(String loguiarDesloguiar, String nombreUsuario);
-    public Usuarios usuarioLoguiado();
+    public Usuario usuarioLoguiado();
 }

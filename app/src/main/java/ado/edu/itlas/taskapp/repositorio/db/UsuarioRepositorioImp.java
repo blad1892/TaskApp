@@ -1,33 +1,23 @@
 package ado.edu.itlas.taskapp.repositorio.db;
 
-import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
-import android.database.CharArrayBuffer;
-import android.database.ContentObserver;
 import android.database.Cursor;
-import android.database.DataSetObserver;
 import android.database.sqlite.SQLiteDatabase;
-import android.net.Uri;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.Gravity;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 // import javax.swing.text.AbstractDocument;
 
-import ado.edu.itlas.taskapp.entidad.Usuarios;
+import ado.edu.itlas.taskapp.entidad.Usuario;
 import ado.edu.itlas.taskapp.repositorio.UsuarioRepositorio;
-import ado.edu.itlas.taskapp.vista.LoginRegistroActivity;
 //import sun.rmi.runtime.Log;
 
 public class UsuarioRepositorioImp implements UsuarioRepositorio {
 
     private ConexionDb conexionDb;
-    Usuarios usuarios;
+    Usuario usuarios;
     private final String LOC_TAG = "Guardando un usuario";
     private final String LOC_TAG2 = "Loguiar usuario";
 
@@ -44,7 +34,7 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
 
 
     @Override
-    public boolean guardar(Usuarios usuarios) {
+    public boolean guardar(Usuario usuarios) {
         ContentValues cv = new ContentValues();
         cv.put(CAMPO_NOMBRE, usuarios.getNombre());
         cv.put(CAMPO_EMAIL, usuarios.getEmail());
@@ -71,7 +61,7 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
     }
 
     @Override
-    public Usuarios buscar(int id) {
+    public Usuario buscar(int id) {
         String sql = "SELECT * FROM usuarios WHERE nombre = '" + usuarios.getNombre() + "'";
         SQLiteDatabase db = conexionDb.getReadableDatabase();
         Cursor cursor = db.rawQuery(sql, null);
@@ -93,8 +83,8 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
     }
 
 
-    public Usuarios buscarUser(String username) {//Este metodo estaba de la siguiente manera public Usuarios buscarUser(String username)
-        Usuarios usuarios = null;
+    public Usuario buscarUser(String username) {//Este metodo estaba de la siguiente manera public Usuario buscarUser(String username)
+        Usuario usuarios = null;
         String sql = "SELECT * FROM usuarios WHERE nombre ='" + username + "'";
 
 //        String[] columnas = {"id", CAMPO_NOMBRE, CAMPO_EMAIL, CAMPO_CONTRACENA, CAMPO_TIPO_USUARIO};
@@ -113,11 +103,11 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
             String loguiado = cursor.getString(cursor.getColumnIndex(CAMPO_LOGUIADO));
             if (tipoUsuario.equals("TECNICO")) {
 
-                usuarios = new Usuarios(id, nombre, email, contracena, Usuarios.TipoUsuario.TECNICO, loguiado);
+                usuarios = new Usuario(id, nombre, email, contracena, Usuario.TipoUsuario.TECNICO, loguiado);
                 db.close();
                 cursor.close();
             } else if (tipoUsuario.equals("NORMAL")) {
-                usuarios = new Usuarios(id, nombre, email, contracena, Usuarios.TipoUsuario.NORMAL, loguiado);
+                usuarios = new Usuario(id, nombre, email, contracena, Usuario.TipoUsuario.NORMAL, loguiado);
 
                 db.close();
                 cursor.close();
@@ -131,9 +121,9 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
     }
 
     @Override
-    public List<Usuarios> buscar(String tecnico) {
+    public List<Usuario> buscar(String tecnico) {
 
-        List<Usuarios> usuarios = new ArrayList<>();
+        List<Usuario> usuarios = new ArrayList<>();
 //        String sql = "SELECT id, nombre, tipoUsuario FROM usuarios WHERE tipoUsuario = 'TECNICO'";
         SQLiteDatabase db = conexionDb.getReadableDatabase();
         String[] columna = {"id", CAMPO_NOMBRE, CAMPO_EMAIL, CAMPO_CONTRACENA, CAMPO_TIPO_USUARIO};
@@ -150,7 +140,7 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
 
 
             if (tipoUsuario.equals("TECNICO")) {
-                usuarios.add(new Usuarios(id, nombre, email, contraceña, Usuarios.TipoUsuario.TECNICO, "INATIVO"));
+                usuarios.add(new Usuario(id, nombre, email, contraceña, Usuario.TipoUsuario.TECNICO, "INATIVO"));
             }
             cursor.moveToNext();
         }
@@ -162,13 +152,14 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
 
 
     //metodo para verificar cual usuario esta loguiado
-    public Usuarios usuarioLoguiado() {
+    public Usuario usuarioLoguiado() {
         String sql = "SELECT * FROM usuarios WHERE loguiado = 'ACTIVO'";
         SQLiteDatabase db = conexionDb.getReadableDatabase();
         Cursor cursor = db.rawQuery(sql, null);
         cursor.moveToFirst();
         String nombre = cursor.getString(cursor.getColumnIndex(CAMPO_NOMBRE));
-        usuarios = new Usuarios(null,nombre,null,null,null,"ACTIVO");
+        int id = cursor.getInt(cursor.getColumnIndex("id"));
+        usuarios = new Usuario(id, nombre, null, null, null, "ACTIVO");
 
         db.close();
         cursor.close();

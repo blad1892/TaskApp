@@ -14,14 +14,14 @@ import android.widget.Toast;
 
 import ado.edu.itlas.taskapp.LoginActivity;
 import ado.edu.itlas.taskapp.R;
-import ado.edu.itlas.taskapp.entidad.Usuarios;
+import ado.edu.itlas.taskapp.entidad.Usuario;
 import ado.edu.itlas.taskapp.repositorio.UsuarioRepositorio;
 import ado.edu.itlas.taskapp.repositorio.db.UsuarioRepositorioImp;
 
 public class LoginRegistroActivity extends AppCompatActivity {
 
     final static String LOC_TAG = "Login Registro Activity";
-    private Usuarios usuarios;
+    private Usuario usuarios;
     private UsuarioRepositorio usuarioRepositorio;
 
 
@@ -47,16 +47,16 @@ public class LoginRegistroActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (usuarios == null) {
-                    usuarios = new Usuarios(null, null, null, null, null,null);
+                    usuarios = new Usuario(null, null, null, null, null,null);
                 }
                 usuarios.setEmail(txtEmail.getText().toString());
                 usuarios.setNombre(txtNombre.getText().toString());
                 usuarios.setContracena(txtContraceña.getText().toString());
 
                 if (rdTecnico.isChecked()) {
-                    usuarios.setTipoUsuario(Usuarios.TipoUsuario.TECNICO);
+                    usuarios.setTipoUsuario(Usuario.TipoUsuario.TECNICO);
                 } else if (rdNormal.isChecked()) {
-                    usuarios.setTipoUsuario(Usuarios.TipoUsuario.NORMAL);
+                    usuarios.setTipoUsuario(Usuario.TipoUsuario.NORMAL);
                 }
                 String cont1 = txtContraceña.getText().toString();
                 String cont2 = txtConfirmarContraceña.getText().toString();

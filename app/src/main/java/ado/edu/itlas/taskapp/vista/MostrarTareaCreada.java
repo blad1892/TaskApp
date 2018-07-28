@@ -30,7 +30,7 @@ Tareas tareas;
         lblFecha.setText(tareas.getFecha().toString());
         lblCategoria.setText(tareas.getCategoria().toString());
         lblEstado.setText(tareas.getEstado().toString());
-        lblUsuarioAsignado.setText(tareas.getUsuarioAsignado());
+//        lblUsuarioAsignado.setText(tareas.getUsuarioAsignado());
         lblDescripcion.setText(tareas.getDescripcion());
 
     }
