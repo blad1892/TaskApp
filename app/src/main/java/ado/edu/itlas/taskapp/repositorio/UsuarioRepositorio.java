@@ -16,4 +16,6 @@ public interface UsuarioRepositorio {
     public Usuarios buscarUser(String username);
 
     public List<Usuarios> buscar(String tecnico);
+    public boolean loguiarUsuario(String loguiarDesloguiar, String nombreUsuario);
+    public Usuarios usuarioLoguiado();
 }

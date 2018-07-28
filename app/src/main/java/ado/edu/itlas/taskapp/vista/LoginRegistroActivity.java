@@ -47,12 +47,11 @@ public class LoginRegistroActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (usuarios == null) {
-                    usuarios = new Usuarios(null, null, null, null, null);
+                    usuarios = new Usuarios(null, null, null, null, null,null);
                 }
                 usuarios.setEmail(txtEmail.getText().toString());
                 usuarios.setNombre(txtNombre.getText().toString());
                 usuarios.setContracena(txtContraceña.getText().toString());
-                usuarios.setConfirmarContracena(txtConfirmarContraceña.getText().toString());
 
                 if (rdTecnico.isChecked()) {
                     usuarios.setTipoUsuario(Usuarios.TipoUsuario.TECNICO);

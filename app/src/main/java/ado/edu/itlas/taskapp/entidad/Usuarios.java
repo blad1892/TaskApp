@@ -7,33 +7,24 @@ import java.io.Serializable;
  */
 
 public class Usuarios implements Serializable {
+
     public enum TipoUsuario {
         TECNICO, NORMAL
     }
-
 
     private Integer id;
     private String nombre;
     private String email;
     private String contracena;
-    private String confirmarContracena;
     private TipoUsuario tipoUsuario;
     private String loguiado;
-    public String getLoguiado() {
 
+    public String getLoguiado() {
         return loguiado;
     }
 
     public void setLoguiado(String loguiado) {
         this.loguiado = loguiado;
-    }
-
-    public String getConfirmarContracena() {
-        return confirmarContracena;
-    }
-
-    public void setConfirmarContracena(String confirmarContracena) {
-        this.confirmarContracena = confirmarContracena;
     }
 
     public Integer getId() {
@@ -76,12 +67,11 @@ public class Usuarios implements Serializable {
         this.tipoUsuario = tipoUsuario;
     }
 
-    public Usuarios(Integer id, String nombre, String email, String contracena, String confirmarContracena, TipoUsuario tipoUsuario, String loguiado) {
+    public Usuarios(Integer id, String nombre, String email, String contracena, TipoUsuario tipoUsuario, String loguiado) {
         this.id = id;
         this.nombre = nombre;
         this.email = email;
         this.contracena = contracena;
-        this.confirmarContracena = confirmarContracena;
         this.tipoUsuario = tipoUsuario;
         this.loguiado = loguiado;
     }
@@ -93,7 +83,6 @@ public class Usuarios implements Serializable {
                 ", nombre='" + nombre + '\'' +
                 ", email='" + email + '\'' +
                 ", contracena='" + contracena + '\'' +
-                ", confirmarContracena='" + confirmarContracena + '\'' +
                 ", tipoUsuario=" + tipoUsuario +
                 ", loguiado='" + loguiado + '\'' +
                 '}';

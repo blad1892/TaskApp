@@ -46,7 +46,7 @@ public class CategoriaActivity extends AppCompatActivity {
             public void onClick(View view) {
 //                Categoria categoria = new Categoria();
                 if (categoria == null) {
-                    categoria = new Categoria();
+                    categoria = new Categoria(null,null);
                 }
 
                 categoria.setNombre(txtNombre.getText().toString());

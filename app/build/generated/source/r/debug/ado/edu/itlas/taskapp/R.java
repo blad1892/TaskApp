@@ -3938,7 +3938,7 @@ public final class R {
     public static final int lblProceso=0x7f080073;
     public static final int lblRegistrarse=0x7f080074;
     public static final int lblUsuario=0x7f080075;
-    public static final int lblUsuarioTecnico=0x7f080076;
+    public static final int lblUsuarioAsignado=0x7f080076;
     public static final int lblfecha=0x7f080077;
     public static final int left=0x7f080078;
     public static final int line1=0x7f080079;
@@ -4055,22 +4055,21 @@ public final class R {
     public static final int transition_position=0x7f0800e8;
     public static final int transition_scene_layoutid_cache=0x7f0800e9;
     public static final int transition_transform=0x7f0800ea;
-    public static final int txtCategoria=0x7f0800eb;
-    public static final int txtConfirmarContracena=0x7f0800ec;
-    public static final int txtContraceña=0x7f0800ed;
-    public static final int txtDescripcion=0x7f0800ee;
-    public static final int txtEmail=0x7f0800ef;
-    public static final int txtNombre=0x7f0800f0;
-    public static final int txtnombre=0x7f0800f1;
-    public static final int uniform=0x7f0800f2;
-    public static final int up=0x7f0800f3;
-    public static final int useLogo=0x7f0800f4;
-    public static final int vertical=0x7f0800f5;
-    public static final int view_offset_helper=0x7f0800f6;
-    public static final int visible=0x7f0800f7;
-    public static final int withText=0x7f0800f8;
-    public static final int wrap=0x7f0800f9;
-    public static final int wrap_content=0x7f0800fa;
+    public static final int txtConfirmarContracena=0x7f0800eb;
+    public static final int txtContraceña=0x7f0800ec;
+    public static final int txtDescripcion=0x7f0800ed;
+    public static final int txtEmail=0x7f0800ee;
+    public static final int txtNombre=0x7f0800ef;
+    public static final int txtnombre=0x7f0800f0;
+    public static final int uniform=0x7f0800f1;
+    public static final int up=0x7f0800f2;
+    public static final int useLogo=0x7f0800f3;
+    public static final int vertical=0x7f0800f4;
+    public static final int view_offset_helper=0x7f0800f5;
+    public static final int visible=0x7f0800f6;
+    public static final int withText=0x7f0800f7;
+    public static final int wrap=0x7f0800f8;
+    public static final int wrap_content=0x7f0800f9;
   }
   public static final class integer {
     public static final int abc_config_activityDefaultDur=0x7f090000;

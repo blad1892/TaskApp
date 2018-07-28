@@ -22,8 +22,8 @@ public class Tareas implements Serializable{
     private Date fechaTerminado;
     private TareaEstado estado;
     private Categoria categoria;
-    private Usuarios usuarioCreador;
-    private Usuarios usuarioAsignado;
+    private String usuarioCreador;
+    private String usuarioAsignado;
 
     public Integer getId() {
         return id;
@@ -81,19 +81,31 @@ public class Tareas implements Serializable{
         this.categoria = categoria;
     }
 
-    public Usuarios getUsuarioCreador() {
+    public String getUsuarioCreador() {
         return usuarioCreador;
     }
 
-    public void setUsuarioCreador(Usuarios usuarioCreador) {
+    public void setUsuarioCreador(String usuarioCreador) {
         this.usuarioCreador = usuarioCreador;
     }
 
-    public Usuarios getUsuarioAsignado() {
+    public String getUsuarioAsignado() {
         return usuarioAsignado;
     }
 
-    public void setUsuarioAsignado(Usuarios usuarioAsignado) {
+    public Tareas(Integer id, String nombre, String descripcion, Date fecha, Date fechaTerminado, TareaEstado estado, Categoria categoria, String usuarioCreador, String usuarioAsignado) {
+        this.id = id;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.fecha = fecha;
+        this.fechaTerminado = fechaTerminado;
+        this.estado = estado;
+        this.categoria = categoria;
+        this.usuarioCreador = usuarioCreador;
+        this.usuarioAsignado = usuarioAsignado;
+    }
+
+    public void setUsuarioAsignado(String usuarioAsignado) {
         this.usuarioAsignado = usuarioAsignado;
     }
 
