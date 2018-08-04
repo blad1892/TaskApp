@@ -20,6 +20,7 @@ public class ConexionDb extends SQLiteOpenHelper {
         super(context, NOMBRE_DB, null, VERSION_DB);
     }
 
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         Log.i(LOG_TAB, "Creando la base de datos");

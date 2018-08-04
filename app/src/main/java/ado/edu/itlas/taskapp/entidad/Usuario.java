@@ -67,6 +67,23 @@ public class Usuario implements Serializable {
         this.tipoUsuario = tipoUsuario;
     }
 
+<<<<<<< HEAD:app/src/main/java/ado/edu/itlas/taskapp/entidad/Usuario.java
+    public Usuario(String usuarioCreador) {
+
+        this.nombre = nombre;
+    }
+
+    public Usuario() {
+        this.id = id;
+        this.nombre = nombre;
+        this.email = email;
+        this.contracena = contracena;
+        this.tipoUsuario = tipoUsuario;
+        this.loguiado = loguiado;
+    }
+
+=======
+>>>>>>> 811755a5a72f92656b002384c0858e29bb7be543:app/src/main/java/ado/edu/itlas/taskapp/entidad/Usuario.java
     public Usuario(Integer id, String nombre, String email, String contracena, TipoUsuario tipoUsuario, String loguiado) {
         this.id = id;
         this.nombre = nombre;

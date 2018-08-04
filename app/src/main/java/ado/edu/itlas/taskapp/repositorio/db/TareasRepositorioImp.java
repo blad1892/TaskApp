@@ -1,37 +1,114 @@
 package ado.edu.itlas.taskapp.repositorio.db;
 
+<<<<<<< HEAD
+import android.content.BroadcastReceiver;
+import android.content.ComponentName;
+import android.content.ContentResolver;
+import android.content.ContentValues;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.IntentSender;
+import android.content.ServiceConnection;
+import android.content.SharedPreferences;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.content.res.AssetManager;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.database.CharArrayBuffer;
+import android.database.ContentObserver;
+import android.database.Cursor;
+import android.database.DataSetObserver;
+import android.database.DatabaseErrorHandler;
+import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.UserHandle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.view.Display;
+import android.view.Window;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+=======
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+>>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+import ado.edu.itlas.taskapp.LoginActivity;
 import ado.edu.itlas.taskapp.entidad.Categoria;
+<<<<<<< HEAD
+import ado.edu.itlas.taskapp.entidad.Tarea;
+=======
 import ado.edu.itlas.taskapp.entidad.Tareas;
+>>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
 import ado.edu.itlas.taskapp.entidad.Usuario;
 import ado.edu.itlas.taskapp.repositorio.TareasRepositorio;
+import ado.edu.itlas.taskapp.vista.AppConfig;
+import ado.edu.itlas.taskapp.vista.CrearTareas;
 
 public class TareasRepositorioImp implements TareasRepositorio {
     ConexionDb conexionDb;
+<<<<<<< HEAD
+    Tarea tarea;
+    Categoria categoria;
+    Usuario usuario;
+=======
     Tareas tareas;
     Categoria categoria = new Categoria();
     Usuario usuarios;
+>>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
     private final static String TABLE_TAREAS = "tareas";
     private final static String CAMPO_NOMBRE = "nombre";
     private final static String CAMPO_DESCRIPCION = "descripcion";
     private final static String CAMPO_FECHA = "fecha";
     private final static String CAMPO_FECHA_TERMINADO = "fechaTerminado";
-    private final static String CAMPOR_ESTADO = "estado";
+    private final static String CAMPO_ESTADO = "estado";
     private final static String CAMPO_CATEGORIA = "categoria";
     private final static String CAMPO_USUARIO_CREADOR = "usuarioCreador";
     private final static String CAMPO_USUARIO_ASIGNADO = "usuarioAsignado";
 
+    public TareasRepositorioImp(Context context) {
+        conexionDb = new ConexionDb(context);
+    }
+
     @Override
-    public boolean guardar(Tareas tareas) {
+    public boolean guardar(Tarea tarea) {
         ContentValues cv = new ContentValues();
+<<<<<<< HEAD
+        cv.put(CAMPO_NOMBRE, tarea.getNombre());
+        cv.put(CAMPO_DESCRIPCION, tarea.getDescripcion());
+        cv.put(CAMPO_FECHA, tarea.getFecha().toString());
+        if (tarea.getFechaTerminado() != null) {
+            cv.put(CAMPO_FECHA_TERMINADO, tarea.getFechaTerminado().toString());
+        }
+        if (tarea.getEstado() == null) {
+            cv.put(CAMPO_ESTADO, Tarea.TareaEstado.PENDIENTE.toString());
+        } else {
+            cv.put(CAMPO_ESTADO, tarea.getEstado().toString());
+        }
+        cv.put(CAMPO_CATEGORIA, tarea.getCategoria().getNombre());
+        cv.put(CAMPO_USUARIO_CREADOR, tarea.getUsuarioCreador().getNombre());
+        cv.put(CAMPO_USUARIO_ASIGNADO, tarea.getUsuarioAsignado().getNombre());
+
+        SQLiteDatabase db = conexionDb.getWritableDatabase();
+=======
         cv.put(CAMPO_NOMBRE, tareas.getNombre());
         cv.put(CAMPO_DESCRIPCION, tareas.getDescripcion());
         cv.put(CAMPO_FECHA, tareas.getFecha().toString());
@@ -43,10 +120,11 @@ public class TareasRepositorioImp implements TareasRepositorio {
 
 
         SQLiteDatabase db =  conexionDb.getWritableDatabase();
+>>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
 
         Long i = db.insert(TABLE_TAREAS, null, cv);
         if (i.intValue() > 0) {
-            tareas.setId(i.intValue());
+            tarea.setId(i.intValue());
             db.close();
             return true;
         }
@@ -54,34 +132,98 @@ public class TareasRepositorioImp implements TareasRepositorio {
         return false;
     }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
     @Override
-    public Tareas buscar(int idTarea) {
+    public Tarea buscar(int Id) {
 
-        String sql = "SELECT id FROM tareas WHERE id=" + tareas.getId() + "";
+        String sql = "SELECT  FROM tareas WHERE id=" + Id + "";
         SQLiteDatabase db = conexionDb.getReadableDatabase();
         Cursor cursor = db.rawQuery(sql, null);
 
         if (cursor.moveToFirst()) {
+            tarea = new Tarea();
 
-            Integer id = cursor.getInt(cursor.getColumnIndex("id"));
-            String nombre = cursor.getString(cursor.getColumnIndex(CAMPO_NOMBRE));
-            String descripcion = cursor.getString(cursor.getColumnIndex(CAMPO_DESCRIPCION));
-            String fechaCreado = cursor.getString(cursor.getColumnIndex(CAMPO_FECHA));
-            String fechaTerminado = cursor.getString(cursor.getColumnIndex(CAMPO_FECHA_TERMINADO));
-            String estado = cursor.getString(cursor.getColumnIndex(CAMPOR_ESTADO));
-            categoria.setNombre(cursor.getString(cursor.getColumnIndex(CAMPO_CATEGORIA)));
+            tarea.setId(cursor.getInt(cursor.getColumnIndex("id")));
+            tarea.setNombre(cursor.getString(cursor.getColumnIndex(CAMPO_NOMBRE)));
+            tarea.setDescripcion(cursor.getString(cursor.getColumnIndex(CAMPO_DESCRIPCION)));
+            Date fechaCreado = new Date(cursor.getLong(cursor.getColumnIndex(CAMPO_FECHA)));
+            Date fechaTerminado = new Date(cursor.getLong(cursor.getColumnIndex(CAMPO_FECHA_TERMINADO)));
+            tarea.setFecha(fechaCreado);
+            tarea.setFechaTerminado(fechaTerminado);
+            String cat = cursor.getString(cursor.getColumnIndex(CAMPO_CATEGORIA));
+            Categoria categoria = new Categoria(cat);
+            tarea.setCategoria(categoria);
+            String estado = cursor.getString(cursor.getColumnIndex(CAMPO_ESTADO));
             String usuarioCreador = cursor.getString(cursor.getColumnIndex(CAMPO_USUARIO_CREADOR));
             String usuarioAsignado = cursor.getString(cursor.getColumnIndex(CAMPO_USUARIO_ASIGNADO));
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
-            Date date = null;
-            try {
+            Usuario usario = new Usuario();
+            usario.setNombre(usuarioCreador);
+            tarea.setUsuarioCreador(usario);
+            usario.setNombre(usuarioAsignado);
+            tarea.setUsuarioAsignado(usario);
 
-                date = simpleDateFormat.parse(fechaCreado);
-            } catch (ParseException e) {
-                e.printStackTrace();
-            }
             switch (estado) {
+                case "PENDIENTE":
+                    tarea.setEstado(Tarea.TareaEstado.PENDIENTE);
+                    break;
+                case "EN_PROCESO":
+                    tarea.setEstado(Tarea.TareaEstado.EN_PROCESO);
+                    break;
+                case "TERMINADO":
+                    tarea.setEstado(Tarea.TareaEstado.TERMINADO);
+                    break;
+            }
+        }
+        db.close();
+        cursor.close();
+        return tarea;
+    }
+
+    @Override
+    public List<Tarea> buscarAsignadoA(Usuario user) {
+        List<Tarea> tareas = new ArrayList<Tarea>();
+
+        String sql = "SELECT tareas.* FROM tareas WHERE tareas.usuarioAsignado='" + user + "'";
+
+        SQLiteDatabase db = conexionDb.getReadableDatabase();
+        String[] columna = {"id", CAMPO_NOMBRE, CAMPO_DESCRIPCION, CAMPO_FECHA, CAMPO_FECHA_TERMINADO, CAMPO_ESTADO, CAMPO_CATEGORIA, CAMPO_USUARIO_CREADOR, CAMPO_USUARIO_ASIGNADO};
+
+        Cursor cs = db.rawQuery(sql, null, null);
+        cs.moveToFirst();
+
+        while (!cs.isAfterLast()) {
+            int id = cs.getInt(cs.getColumnIndex("id"));
+            String nombre = cs.getString(cs.getColumnIndex(CAMPO_NOMBRE));
+            String descripcion = cs.getString(cs.getColumnIndex(CAMPO_DESCRIPCION));
+            Date fechaCreado = new Date(cs.getLong(cs.getColumnIndex(CAMPO_FECHA)));
+            Date fechaTerminado = new Date(cs.getLong(cs.getColumnIndex(CAMPO_FECHA_TERMINADO)));
+            String cat = cs.getString(cs.getColumnIndex(CAMPO_CATEGORIA));
+
+            Categoria categoria = new Categoria(cat);
+
+            String estado = cs.getString(cs.getColumnIndex(CAMPO_ESTADO));
+            Usuario usario = new Usuario();
+            String usuarioCreador = cs.getString(cs.getColumnIndex(CAMPO_USUARIO_CREADOR));
+            String usuarioAsignado = cs.getString(cs.getColumnIndex(CAMPO_USUARIO_ASIGNADO));
+            usario.setNombre(usuarioCreador);
+
+            switch (estado) {
+<<<<<<< HEAD
+                case "PENDIENTE":
+                    tareas.add(new Tarea(id, nombre, descripcion, fechaCreado, Tarea.TareaEstado.PENDIENTE, categoria, usario));
+//                    tarea.setEstado(Tarea.TareaEstado.PENDIENTE);
+                    break;
+                case "EN_PROCESO":
+                    tareas.add(new Tarea(id, nombre, descripcion, fechaCreado, Tarea.TareaEstado.PENDIENTE, categoria, usario));
+//                    tarea.setEstado(Tarea.TareaEstado.EN_PROCESO);
+                    break;
+                case "TERMINADO":
+                    tareas.add(new Tarea(id, nombre, descripcion, fechaCreado, Tarea.TareaEstado.PENDIENTE, categoria, usario));
+//                    tarea.setEstado(Tarea.TareaEstado.TERMINADO);
+=======
                 case "PENDIENTE": {
 //                    tareas = new Tareas(id, nombre, descripcion, date, null, Tareas.TareaEstado.PENDIENTE, categoria, usuarioCreador, usuarioAsignado);
                     break;
@@ -92,15 +234,65 @@ public class TareasRepositorioImp implements TareasRepositorio {
                 }
                 case "TERMINADO": {
 //                    tareas = new Tareas(id, nombre, descripcion, date, null, Tareas.TareaEstado.TERMINADO, categoria, usuarioCreador, usuarioAsignado);
+>>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
                     break;
-                }
             }
+            cs.moveToNext();
+
         }
 
         return tareas;
     }
 
     @Override
+<<<<<<< HEAD
+    public List<Tarea> buscarCreadoPor(Usuario usuario) {
+        List<Tarea> tareas = new ArrayList<Tarea>();
+        String sql = "SELECT tareas.* FROM tareas WHERE tareas.usuarioCreador='" + usuario.toString() + "'";
+        SQLiteDatabase db = conexionDb.getReadableDatabase();
+        String[] columna = {"id", CAMPO_NOMBRE, CAMPO_DESCRIPCION, CAMPO_FECHA, CAMPO_FECHA_TERMINADO, CAMPO_ESTADO, CAMPO_CATEGORIA, CAMPO_USUARIO_CREADOR, CAMPO_USUARIO_ASIGNADO};
+
+        Cursor cs = db.rawQuery(sql, null);
+//        Cursor cs= db.query(TABLE_TAREAS,columna,null,null,null,null,null);
+        cs.moveToFirst();
+        while (!cs.isAfterLast()) {
+//            if(cs.getString(cs.getColumnIndex(CAMPO_USUARIO_CREADOR)).equals(usuario.toString())) {
+            int id = cs.getInt(cs.getColumnIndex("id"));
+            String nombre = cs.getString(cs.getColumnIndex(CAMPO_NOMBRE));
+            String descripcion = cs.getString(cs.getColumnIndex(CAMPO_DESCRIPCION));
+            Date fechaCreado = new Date(cs.getLong(cs.getColumnIndex(CAMPO_FECHA)));
+            Date fechaTerminado = new Date(cs.getLong(cs.getColumnIndex(CAMPO_FECHA_TERMINADO)));
+            String cat = cs.getString(cs.getColumnIndex(CAMPO_CATEGORIA));
+            Categoria categoria = new Categoria(cat);
+
+            String estado = cs.getString(cs.getColumnIndex(CAMPO_ESTADO));
+            Usuario usario = new Usuario();
+            String usuarioCreador = cs.getString(cs.getColumnIndex(CAMPO_USUARIO_CREADOR));
+            String usuarioAsignado = cs.getString(cs.getColumnIndex(CAMPO_USUARIO_ASIGNADO));
+
+            usario.setNombre(usuarioAsignado);
+
+            switch (estado) {
+                case "PENDIENTE":
+                    tareas.add(new Tarea(id, nombre, descripcion, fechaCreado, Tarea.TareaEstado.PENDIENTE, categoria,usario));
+//                    tarea.setEstado(Tarea.TareaEstado.PENDIENTE);
+                    break;
+                case "EN_PROCESO":
+                    tareas.add(new Tarea(id, nombre, descripcion, fechaCreado, Tarea.TareaEstado.PENDIENTE, categoria, usario));
+//                    tarea.setEstado(Tarea.TareaEstado.EN_PROCESO);
+                    break;
+                case "TERMINADO":
+                    tareas.add(new Tarea(id, nombre, descripcion, fechaCreado, Tarea.TareaEstado.PENDIENTE, categoria, usario));
+//                    tarea.setEstado(Tarea.TareaEstado.TERMINADO);
+                    break;
+            }
+//            }
+            cs.moveToNext();
+        }
+        db.close();
+        cs.close();
+        return tareas;
+=======
     public List<Tareas> buscarAsignadoA(Usuario usuarios) {
         return null;
     }
@@ -108,5 +300,6 @@ public class TareasRepositorioImp implements TareasRepositorio {
     @Override
     public List<Tareas> buscarCreadoPor(Usuario usuarios) {
         return null;
+>>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
     }
 }

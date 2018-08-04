@@ -17,7 +17,11 @@ import java.util.List;
 
 import ado.edu.itlas.taskapp.R;
 import ado.edu.itlas.taskapp.entidad.Categoria;
+<<<<<<< HEAD
+import ado.edu.itlas.taskapp.entidad.Tarea;
+=======
 import ado.edu.itlas.taskapp.entidad.Tareas;
+>>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
 import ado.edu.itlas.taskapp.entidad.Usuario;
 import ado.edu.itlas.taskapp.repositorio.CategoriaRepositorio;
 import ado.edu.itlas.taskapp.repositorio.TareasRepositorio;
@@ -31,9 +35,15 @@ public class CrearTareas extends AppCompatActivity {
     CategoriaRepositorio categoriaRepositorio;
     UsuarioRepositorio usuarioRepositorio;
     Categoria categoria;
+<<<<<<< HEAD
+    Tarea tarea;
+    Usuario usuario;
+    TareasRepositorio tareasRepositorio = new TareasRepositorioImp(this);
+=======
     Tareas tarea;
     Usuario usuario;
     TareasRepositorio tareasRepositorio = new TareasRepositorioImp();
+>>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +51,17 @@ public class CrearTareas extends AppCompatActivity {
         setContentView(R.layout.activity_crear_tareas);
 
         final TextView lblUsuario = (TextView) findViewById(R.id.lblUsuario);
+<<<<<<< HEAD
+        lblUsuario.setText(AppConfig.getConfig().getUsuario().getNombre());
+
+=======
+>>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
         categoriaRepositorio = new CategoriaRepositorioImp(this);
         final List<Categoria> categorias = categoriaRepositorio.buscar(null);
 
         final Spinner spinerCategoria = (Spinner) findViewById(R.id.spinerCategoria);
-        spinerCategoria.setAdapter(new CategoriaListAdapter(this, categorias));
+        ArrayAdapter<Categoria> adapterCategoria = new ArrayAdapter<Categoria>(this, android.R.layout.simple_list_item_1, categorias);
+        spinerCategoria.setAdapter(adapterCategoria);
 
         usuarioRepositorio = new UsuarioRepositorioImp(this);
         final List<Usuario> usuarios = usuarioRepositorio.buscar(null);
@@ -58,6 +74,36 @@ public class CrearTareas extends AppCompatActivity {
 
 
         final Button btnGuardar = (Button) findViewById(R.id.btnGuardar);
+<<<<<<< HEAD
+        btnGuardar.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Usuario ut = (Usuario) spinerUsuarioTecnico.getSelectedItem();
+                        if (ut == null) {
+                            Toast.makeText(CrearTareas.this, "Debes seleccionar un usuario Tecnico", Toast.LENGTH_LONG).show();
+                            return;
+                        }
+                        tarea = new Tarea();
+                        tarea.setNombre(lblUsuario.getText().toString());
+                        Categoria catg = (Categoria) spinerCategoria.getSelectedItem();
+                        tarea.setCategoria(catg);
+                        tarea.setDescripcion(txtDescripcion.getText().toString());
+                        tarea.setEstado(Tarea.TareaEstado.PENDIENTE);
+                        tarea.setUsuarioCreador(AppConfig.getConfig().getUsuario());
+                        tarea.setUsuarioAsignado(ut);
+                        tarea.setFecha(new Date());
+
+                        if (tareasRepositorio.guardar(tarea)) {
+                            Intent intent = new Intent(CrearTareas.this, TareaUsuarioNormal.class);
+                            intent.putExtra("id", tarea.getId());
+                            startActivity(intent);
+                        }
+                    }
+                }
+        );
+
+=======
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,7 +131,6 @@ public class CrearTareas extends AppCompatActivity {
                 }
             }
         });
+>>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
     }
-
 }
-

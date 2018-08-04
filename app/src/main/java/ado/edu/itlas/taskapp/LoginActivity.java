@@ -34,23 +34,54 @@ public class LoginActivity extends AppCompatActivity {
 
         Button btnIniciar = (Button) findViewById(R.id.btnIniciar);
         final EditText txtNombre = (EditText) findViewById(R.id.txtNombre);
-        EditText txtContraceña = (EditText) findViewById(R.id.txtContraceña);
+
         TextView lblRegistrarce = (TextView) findViewById(R.id.lblRegistrarse);
 
         btnIniciar.setOnClickListener(new View.OnClickListener() {
                                           @Override
                                           public void onClick(View v) {
-
-
+                                              usuario = new Usuario();
                                               EditText txtUsuario = (EditText) findViewById(R.id.txtNombre);
-                                              EditText txtContraceña = (EditText) findViewById(R.id.txtContraceña);
+                                              EditText txtContracena = (EditText) findViewById(R.id.txtContraceña);
+                                              usuario.setNombre(txtUsuario.getText().toString());
+                                              usuario = usuarioRepositorio.buscarUser(usuario.toString());
 
+<<<<<<< HEAD
+                                              if (txtNombre.getText().toString().equals("admin") && txtContracena.getText().toString().equals("admin")) {
+=======
                                               usuario = usuarioRepositorio.buscarUser(txtUsuario.getText().toString());
                                               if (txtNombre.getText().toString().equals("admin") && txtContraceña.getText().toString().equals("admin")) {
+>>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
                                                   Intent intento = new Intent(LoginActivity.this, MainActivity.class);
                                                   startActivity(intento);
                                                   return;
                                               }
+<<<<<<< HEAD
+                                              if (usuario == null) {
+                                                  Toast miToas = Toast.makeText(LoginActivity.this, "Usuario no registrado", Toast.LENGTH_LONG);
+                                                  miToas.setGravity(Gravity.CENTER, 20, 40);
+                                                  miToas.show();
+                                                  return;
+                                              }
+
+                                              if (usuario.getNombre().equals(txtNombre.getText().toString()) && usuario.getContracena().equals(txtContracena.getText().toString())) {
+
+                                                  AppConfig.getConfig().setUsuario(usuario);
+
+                                                  if (usuario.getTipoUsuario() == Usuario.TipoUsuario.TECNICO) {
+                                                      Intent intento = new Intent(LoginActivity.this, TareaUsuarioTecnico.class);
+                                                      startActivity(intento);
+                                                  } else if (usuario.getTipoUsuario().equals(Usuario.TipoUsuario.NORMAL)) {
+                                                      Intent intento = new Intent(LoginActivity.this, TareaUsuarioNormal.class);
+                                                      startActivity(intento);
+                                                  }
+
+                                              } else if (usuario.getNombre().equals(txtUsuario.getText().toString()) && usuario.getContracena() != txtContracena.getText().toString()) {
+                                                  Toast miToas = Toast.makeText(LoginActivity.this, "La Contraceña es incorecta", Toast.LENGTH_LONG);
+                                                  miToas.setGravity(Gravity.CENTER, 20, 40);
+                                                  miToas.show();
+
+=======
 
 
                                               if (usuario == null) {
@@ -58,6 +89,7 @@ public class LoginActivity extends AppCompatActivity {
                                                   miToas.setGravity(Gravity.CENTER, 20, 40);
                                                   miToas.show();
                                                   return;
+>>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
                                               }
 
                                               if (usuario.getNombre().equals(txtNombre.getText().toString()) && usuario.getContracena().equals(txtContraceña.getText().toString())) {

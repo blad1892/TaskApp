@@ -75,7 +75,9 @@
             android:layout_marginTop="5pt"
             android:ems="10"
             android:inputType="textMultiLine"
-            android:singleLine="false" />
+            android:singleLine="false"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="2"/>
 
 
     </LinearLayout>
@@ -120,6 +122,8 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.918"

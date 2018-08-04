@@ -83,7 +83,11 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
     }
 
 
+<<<<<<< HEAD
+    public Usuario buscarUser(String username) {//Este metodo estaba de la siguiente manera public Usuarios buscarUser(String username)
+=======
     public Usuario buscarUser(String username) {//Este metodo estaba de la siguiente manera public Usuario buscarUser(String username)
+>>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
         Usuario usuarios = null;
         String sql = "SELECT * FROM usuarios WHERE nombre ='" + username + "'";
 
@@ -158,8 +162,12 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
         Cursor cursor = db.rawQuery(sql, null);
         cursor.moveToFirst();
         String nombre = cursor.getString(cursor.getColumnIndex(CAMPO_NOMBRE));
+<<<<<<< HEAD
+        usuarios = new Usuario(null,nombre,null,null,null,"ACTIVO");
+=======
         int id = cursor.getInt(cursor.getColumnIndex("id"));
         usuarios = new Usuario(id, nombre, null, null, null, "ACTIVO");
+>>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
 
         db.close();
         cursor.close();
