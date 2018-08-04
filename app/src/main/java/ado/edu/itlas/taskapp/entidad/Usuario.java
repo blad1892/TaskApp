@@ -17,15 +17,6 @@ public class Usuario implements Serializable {
     private String email;
     private String contracena;
     private TipoUsuario tipoUsuario;
-    private String loguiado;
-
-    public String getLoguiado() {
-        return loguiado;
-    }
-
-    public void setLoguiado(String loguiado) {
-        this.loguiado = loguiado;
-    }
 
     public Integer getId() {
         return id;
@@ -67,7 +58,7 @@ public class Usuario implements Serializable {
         this.tipoUsuario = tipoUsuario;
     }
 
-<<<<<<< HEAD:app/src/main/java/ado/edu/itlas/taskapp/entidad/Usuario.java
+
     public Usuario(String usuarioCreador) {
 
         this.nombre = nombre;
@@ -79,18 +70,17 @@ public class Usuario implements Serializable {
         this.email = email;
         this.contracena = contracena;
         this.tipoUsuario = tipoUsuario;
-        this.loguiado = loguiado;
+
     }
 
-=======
->>>>>>> 811755a5a72f92656b002384c0858e29bb7be543:app/src/main/java/ado/edu/itlas/taskapp/entidad/Usuario.java
-    public Usuario(Integer id, String nombre, String email, String contracena, TipoUsuario tipoUsuario, String loguiado) {
+
+    public Usuario(Integer id, String nombre, String email, String contracena, TipoUsuario tipoUsuario) {
         this.id = id;
         this.nombre = nombre;
         this.email = email;
         this.contracena = contracena;
         this.tipoUsuario = tipoUsuario;
-        this.loguiado = loguiado;
+
     }
 
     @Override

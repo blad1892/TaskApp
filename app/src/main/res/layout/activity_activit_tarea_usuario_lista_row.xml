@@ -7,14 +7,10 @@
     tools:context=".vista.ActivityListaAdapterTecnico">
 
     <LinearLayout
-<<<<<<< HEAD
+
         android:id="@+id/linearLayout4"
         android:layout_width="360dp"
         android:layout_height="174dp"
-=======
-        android:layout_width="368dp"
-        android:layout_height="176dp"
->>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

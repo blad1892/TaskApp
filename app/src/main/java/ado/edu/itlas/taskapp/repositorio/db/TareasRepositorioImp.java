@@ -1,79 +1,27 @@
 package ado.edu.itlas.taskapp.repositorio.db;
 
-<<<<<<< HEAD
-import android.content.BroadcastReceiver;
-import android.content.ComponentName;
-import android.content.ContentResolver;
+
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.IntentSender;
-import android.content.ServiceConnection;
-import android.content.SharedPreferences;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
-import android.content.res.AssetManager;
-import android.content.res.Configuration;
-import android.content.res.Resources;
-import android.database.CharArrayBuffer;
-import android.database.ContentObserver;
-import android.database.Cursor;
-import android.database.DataSetObserver;
-import android.database.DatabaseErrorHandler;
-import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-import android.os.UserHandle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.view.Display;
-import android.view.Window;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-=======
-import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
->>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import ado.edu.itlas.taskapp.LoginActivity;
 import ado.edu.itlas.taskapp.entidad.Categoria;
-<<<<<<< HEAD
+
 import ado.edu.itlas.taskapp.entidad.Tarea;
-=======
-import ado.edu.itlas.taskapp.entidad.Tareas;
->>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
 import ado.edu.itlas.taskapp.entidad.Usuario;
 import ado.edu.itlas.taskapp.repositorio.TareasRepositorio;
-import ado.edu.itlas.taskapp.vista.AppConfig;
-import ado.edu.itlas.taskapp.vista.CrearTareas;
 
 public class TareasRepositorioImp implements TareasRepositorio {
     ConexionDb conexionDb;
-<<<<<<< HEAD
     Tarea tarea;
-    Categoria categoria;
-    Usuario usuario;
-=======
-    Tareas tareas;
     Categoria categoria = new Categoria();
-    Usuario usuarios;
->>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
+    Usuario usuario;
+
     private final static String TABLE_TAREAS = "tareas";
     private final static String CAMPO_NOMBRE = "nombre";
     private final static String CAMPO_DESCRIPCION = "descripcion";
@@ -91,7 +39,7 @@ public class TareasRepositorioImp implements TareasRepositorio {
     @Override
     public boolean guardar(Tarea tarea) {
         ContentValues cv = new ContentValues();
-<<<<<<< HEAD
+
         cv.put(CAMPO_NOMBRE, tarea.getNombre());
         cv.put(CAMPO_DESCRIPCION, tarea.getDescripcion());
         cv.put(CAMPO_FECHA, tarea.getFecha().toString());
@@ -108,19 +56,19 @@ public class TareasRepositorioImp implements TareasRepositorio {
         cv.put(CAMPO_USUARIO_ASIGNADO, tarea.getUsuarioAsignado().getNombre());
 
         SQLiteDatabase db = conexionDb.getWritableDatabase();
-=======
-        cv.put(CAMPO_NOMBRE, tareas.getNombre());
-        cv.put(CAMPO_DESCRIPCION, tareas.getDescripcion());
-        cv.put(CAMPO_FECHA, tareas.getFecha().toString());
+
+        cv.put(CAMPO_NOMBRE, tarea.getNombre());
+        cv.put(CAMPO_DESCRIPCION, tarea.getDescripcion());
+        cv.put(CAMPO_FECHA, tarea.getFecha().toString());
 //        cv.put(CAMPO_FECHA_TERMINADO, );
-        cv.put(CAMPOR_ESTADO, tareas.getEstado().toString());
+        cv.put(CAMPO_ESTADO, tarea.getEstado().toString());
         cv.put(CAMPO_CATEGORIA, categoria.getNombre());
 //        cv.put(CAMPO_USUARIO_CREADOR, tareas.getUsuarioCreador());
 //        cv.put(CAMPO_USUARIO_ASIGNADO, tareas.getUsuarioAsignado());
 
 
-        SQLiteDatabase db =  conexionDb.getWritableDatabase();
->>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
+        db = conexionDb.getWritableDatabase();
+
 
         Long i = db.insert(TABLE_TAREAS, null, cv);
         if (i.intValue() > 0) {
@@ -132,16 +80,14 @@ public class TareasRepositorioImp implements TareasRepositorio {
         return false;
     }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
     @Override
     public Tarea buscar(int Id) {
 
         String sql = "SELECT  FROM tareas WHERE id=" + Id + "";
         SQLiteDatabase db = conexionDb.getReadableDatabase();
         Cursor cursor = db.rawQuery(sql, null);
+
 
         if (cursor.moveToFirst()) {
             tarea = new Tarea();
@@ -192,9 +138,8 @@ public class TareasRepositorioImp implements TareasRepositorio {
         String[] columna = {"id", CAMPO_NOMBRE, CAMPO_DESCRIPCION, CAMPO_FECHA, CAMPO_FECHA_TERMINADO, CAMPO_ESTADO, CAMPO_CATEGORIA, CAMPO_USUARIO_CREADOR, CAMPO_USUARIO_ASIGNADO};
 
         Cursor cs = db.rawQuery(sql, null, null);
-        cs.moveToFirst();
 
-        while (!cs.isAfterLast()) {
+        while (cs.moveToFirst()) {
             int id = cs.getInt(cs.getColumnIndex("id"));
             String nombre = cs.getString(cs.getColumnIndex(CAMPO_NOMBRE));
             String descripcion = cs.getString(cs.getColumnIndex(CAMPO_DESCRIPCION));
@@ -209,9 +154,7 @@ public class TareasRepositorioImp implements TareasRepositorio {
             String usuarioCreador = cs.getString(cs.getColumnIndex(CAMPO_USUARIO_CREADOR));
             String usuarioAsignado = cs.getString(cs.getColumnIndex(CAMPO_USUARIO_ASIGNADO));
             usario.setNombre(usuarioCreador);
-
             switch (estado) {
-<<<<<<< HEAD
                 case "PENDIENTE":
                     tareas.add(new Tarea(id, nombre, descripcion, fechaCreado, Tarea.TareaEstado.PENDIENTE, categoria, usario));
 //                    tarea.setEstado(Tarea.TareaEstado.PENDIENTE);
@@ -223,29 +166,17 @@ public class TareasRepositorioImp implements TareasRepositorio {
                 case "TERMINADO":
                     tareas.add(new Tarea(id, nombre, descripcion, fechaCreado, Tarea.TareaEstado.PENDIENTE, categoria, usario));
 //                    tarea.setEstado(Tarea.TareaEstado.TERMINADO);
-=======
-                case "PENDIENTE": {
-//                    tareas = new Tareas(id, nombre, descripcion, date, null, Tareas.TareaEstado.PENDIENTE, categoria, usuarioCreador, usuarioAsignado);
-                    break;
-                }
-                case "EN_PROCESO": {
-//                    tareas = new Tareas(id, nombre, descripcion, date, null, Tareas.TareaEstado.EN_PROCESO, categoria, usuarioCreador, usuarioAsignado);
-                    break;
-                }
-                case "TERMINADO": {
-//                    tareas = new Tareas(id, nombre, descripcion, date, null, Tareas.TareaEstado.TERMINADO, categoria, usuarioCreador, usuarioAsignado);
->>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
                     break;
             }
             cs.moveToNext();
-
         }
+        db.close();
+        cs.close();
 
         return tareas;
     }
 
     @Override
-<<<<<<< HEAD
     public List<Tarea> buscarCreadoPor(Usuario usuario) {
         List<Tarea> tareas = new ArrayList<Tarea>();
         String sql = "SELECT tareas.* FROM tareas WHERE tareas.usuarioCreador='" + usuario.toString() + "'";
@@ -274,7 +205,7 @@ public class TareasRepositorioImp implements TareasRepositorio {
 
             switch (estado) {
                 case "PENDIENTE":
-                    tareas.add(new Tarea(id, nombre, descripcion, fechaCreado, Tarea.TareaEstado.PENDIENTE, categoria,usario));
+                    tareas.add(new Tarea(id, nombre, descripcion, fechaCreado, Tarea.TareaEstado.PENDIENTE, categoria, usario));
 //                    tarea.setEstado(Tarea.TareaEstado.PENDIENTE);
                     break;
                 case "EN_PROCESO":
@@ -292,14 +223,9 @@ public class TareasRepositorioImp implements TareasRepositorio {
         db.close();
         cs.close();
         return tareas;
-=======
-    public List<Tareas> buscarAsignadoA(Usuario usuarios) {
-        return null;
-    }
 
-    @Override
-    public List<Tareas> buscarCreadoPor(Usuario usuarios) {
-        return null;
->>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
     }
 }
+
+
+

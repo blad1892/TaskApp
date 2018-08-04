@@ -92,23 +92,7 @@ public class Tarea implements Serializable{
         this.categoria = categoria;
     }
 
-<<<<<<< HEAD:app/src/main/java/ado/edu/itlas/taskapp/entidad/Tarea.java
-    public Tarea(Integer id, String nombre, String descripcion, Date fecha, Date fechaTerminado, TareaEstado estado, Categoria categoria, Usuario usuarioCreador, Usuario usuarioAsignado) {
-        this.id = id;
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.fecha = fecha;
-        this.fechaTerminado = fechaTerminado;
-        this.estado = estado;
-        this.categoria = categoria;
-        this.usuarioCreador = usuarioCreador;
-        this.usuarioAsignado = usuarioAsignado;
-    }
-
     public Tarea() {
-=======
-    public Tareas() {
->>>>>>> 811755a5a72f92656b002384c0858e29bb7be543:app/src/main/java/ado/edu/itlas/taskapp/entidad/Tareas.java
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;

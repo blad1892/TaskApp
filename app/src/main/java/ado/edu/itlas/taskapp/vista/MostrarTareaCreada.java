@@ -26,7 +26,7 @@ public class MostrarTareaCreada extends AppCompatActivity {
         TextView lblEstado = (TextView) findViewById(R.id.lblEstado);
         TextView lblDescripcion = (TextView) findViewById(R.id.lblDescripcion);
 
-<<<<<<< HEAD
+
         Bundle bundle = getIntent().getExtras();
         tarea = new Tarea();
         if (bundle != null && bundle.containsKey("tarea")) {
@@ -38,13 +38,13 @@ public class MostrarTareaCreada extends AppCompatActivity {
             lblDescripcion.setText(tarea.getDescripcion());
         }
 //        tarea = tareasRepositorio.buscar(tarea.getId());
-=======
-        lblFecha.setText(tareas.getFecha().toString());
-        lblCategoria.setText(tareas.getCategoria().toString());
-        lblEstado.setText(tareas.getEstado().toString());
-//        lblUsuarioAsignado.setText(tareas.getUsuarioAsignado());
-        lblDescripcion.setText(tareas.getDescripcion());
->>>>>>> 811755a5a72f92656b002384c0858e29bb7be543
+
+        lblFecha.setText(tarea.getFecha().toString());
+        lblCategoria.setText(tarea.getCategoria().toString());
+        lblEstado.setText(tarea.getEstado().toString());
+        lblUsuarioAsignado.setText(tarea.getUsuarioAsignado().toString());
+        lblDescripcion.setText(tarea.getDescripcion());
+
 
     }
 }
