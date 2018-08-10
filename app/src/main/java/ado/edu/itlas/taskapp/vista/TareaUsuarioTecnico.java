@@ -39,13 +39,13 @@ public class TareaUsuarioTecnico extends AppCompatActivity {
 
         usuario = new Usuario();
         usuario.setNombre(AppConfig.getConfig().getUsuario().toString());
-        List<Tarea> tareas = tareasRepositorio.buscarAsignadoA(usuario);
+        final List<Tarea> tareas = tareasRepositorio.buscarAsignadoA(usuario);
 
         taLisViewTecnico.setAdapter(new ActivityListaAdapterTecnico(this, tareas));
+
         taLisViewTecnico.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-
 
                 Tarea taExtra = (Tarea) adapterView.getItemAtPosition(position);
 

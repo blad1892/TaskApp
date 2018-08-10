@@ -7,9 +7,9 @@ import java.util.Date;
  * Created by MESCyT on 7/7/2018.
  */
 
-public class Tarea implements Serializable{
+public class Tarea implements Serializable {
 
-    public enum TareaEstado{
+    public enum TareaEstado {
         PENDIENTE,
         EN_PROCESO,
         TERMINADO
@@ -63,6 +63,7 @@ public class Tarea implements Serializable{
         this.usuarioAsignado = usuarioAsignado;
     }
 
+
     public void setFecha(Date fecha) {
         this.fecha = fecha;
 
@@ -90,6 +91,18 @@ public class Tarea implements Serializable{
 
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
+    }
+
+    public Tarea(Integer id, String nombre, String descripcion, Date fecha, Date fechaTerminado, TareaEstado estado, Categoria categoria, Usuario usuarioCreador, Usuario usuarioAsignado) {
+        this.id = id;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.fecha = fecha;
+        this.fechaTerminado = fechaTerminado;
+        this.estado = estado;
+        this.categoria = categoria;
+        this.usuarioCreador = usuarioCreador;
+        this.usuarioAsignado = usuarioAsignado;
     }
 
     public Tarea() {

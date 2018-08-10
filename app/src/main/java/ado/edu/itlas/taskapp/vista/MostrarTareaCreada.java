@@ -1,5 +1,6 @@
 package ado.edu.itlas.taskapp.vista;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -26,7 +27,6 @@ public class MostrarTareaCreada extends AppCompatActivity {
         TextView lblEstado = (TextView) findViewById(R.id.lblEstado);
         TextView lblDescripcion = (TextView) findViewById(R.id.lblDescripcion);
 
-
         Bundle bundle = getIntent().getExtras();
         tarea = new Tarea();
         if (bundle != null && bundle.containsKey("tarea")) {
@@ -34,17 +34,17 @@ public class MostrarTareaCreada extends AppCompatActivity {
             lblFecha.setText(tarea.getFecha().toString());
             lblCategoria.setText(tarea.getCategoria().toString());
             lblEstado.setText(tarea.getEstado().toString());
-            lblUsuarioAsignado.setText("Asignado A: " + tarea.getUsuarioAsignado().getNombre());
+            if (lblEstado.getText().toString().equals("PENDIENTE")) {
+                lblEstado.setTextColor(Color.parseColor("#FFFF8800"));
+            } else if (lblEstado.getText().toString().equals("EN_PROCESO")) {
+                lblEstado.setTextColor(Color.BLUE);
+            } else if (lblEstado.getText().toString().equals("TERMINADO")) {
+                lblEstado.setTextColor(Color.GREEN);
+            }
+            lblUsuarioAsignado.setText(tarea.getUsuarioAsignado().getNombre());
             lblDescripcion.setText(tarea.getDescripcion());
         }
 //        tarea = tareasRepositorio.buscar(tarea.getId());
-
-        lblFecha.setText(tarea.getFecha().toString());
-        lblCategoria.setText(tarea.getCategoria().toString());
-        lblEstado.setText(tarea.getEstado().toString());
-        lblUsuarioAsignado.setText(tarea.getUsuarioAsignado().toString());
-        lblDescripcion.setText(tarea.getDescripcion());
-
 
     }
 }

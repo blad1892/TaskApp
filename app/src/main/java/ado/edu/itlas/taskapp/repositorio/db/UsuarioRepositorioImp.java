@@ -26,6 +26,7 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
     private static final String CAMPO_EMAIL = "email";
     private static final String CAMPO_CONTRACENA = "contracena";
     private static final String CAMPO_TIPO_USUARIO = "tipoUsuario";
+    private static final String CAMPO_LOGUIADO = "loguiado";
 
     public UsuarioRepositorioImp(Context context) {
         conexionDb = new ConexionDb(context);
@@ -82,13 +83,14 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
     }
 
 
-    public Usuario buscarUser(String username) {//Este metodo estaba de la siguiente manera public Usuario buscarUser(String username)
-
+    public Usuario buscarUser(String username) {//Este metodo estaba de la siguiente manera public Usuarios buscarUser(String username)
         Usuario usuarios = null;
         String sql = "SELECT * FROM usuarios WHERE nombre ='" + username + "'";
 
 //        String[] columnas = {"id", CAMPO_NOMBRE, CAMPO_EMAIL, CAMPO_CONTRACENA, CAMPO_TIPO_USUARIO};
-
+        if (!username.equals("admin")) {
+            loguiarUsuario("ACTIVO", username);
+        }
         SQLiteDatabase db = conexionDb.getReadableDatabase();
         Cursor cursor = db.rawQuery(sql, null);
         if (cursor.moveToFirst()) {
@@ -98,14 +100,14 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
             String email = cursor.getString(cursor.getColumnIndex(CAMPO_EMAIL));
             String contracena = cursor.getString(cursor.getColumnIndex(CAMPO_CONTRACENA));
             String tipoUsuario = cursor.getString(cursor.getColumnIndex(CAMPO_TIPO_USUARIO));
-
+            String loguiado = cursor.getString(cursor.getColumnIndex(CAMPO_LOGUIADO));
             if (tipoUsuario.equals("TECNICO")) {
 
-                usuarios = new Usuario(id, nombre, email, contracena, Usuario.TipoUsuario.TECNICO);
+                usuarios = new Usuario(id, nombre, email, contracena, Usuario.TipoUsuario.TECNICO, loguiado);
                 db.close();
                 cursor.close();
             } else if (tipoUsuario.equals("NORMAL")) {
-                usuarios = new Usuario(id, nombre, email, contracena, Usuario.TipoUsuario.NORMAL);
+                usuarios = new Usuario(id, nombre, email, contracena, Usuario.TipoUsuario.NORMAL, loguiado);
 
                 db.close();
                 cursor.close();
@@ -138,7 +140,7 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
 
 
             if (tipoUsuario.equals("TECNICO")) {
-                usuarios.add(new Usuario(id, nombre, email, contraceña, Usuario.TipoUsuario.TECNICO));
+                usuarios.add(new Usuario(id, nombre, email, contraceña, Usuario.TipoUsuario.TECNICO, "INATIVO"));
             }
             cursor.moveToNext();
         }
@@ -148,6 +150,42 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
         return usuarios;
     }
 
+
+    //metodo para verificar cual usuario esta loguiado
+    public Usuario usuarioLoguiado() {
+        String sql = "SELECT * FROM usuarios WHERE loguiado = 'ACTIVO'";
+        SQLiteDatabase db = conexionDb.getReadableDatabase();
+        Cursor cursor = db.rawQuery(sql, null);
+        cursor.moveToFirst();
+        String nombre = cursor.getString(cursor.getColumnIndex(CAMPO_NOMBRE));
+        usuarios = new Usuario(null,nombre,null,null,null,"ACTIVO");
+
+        db.close();
+        cursor.close();
+        return usuarios;
+    }
+
+    //metodo para loguiar y desloguiar un usuario
+    public boolean loguiarUsuario(String loguiarDesloguiar, String nombreUsuario) {
+        if (loguiarDesloguiar.equals("ACTIVO")) {
+            String sql = "UPDATE usuarios SET loguiado = '" + loguiarDesloguiar + "' WHERE nombre='" + nombreUsuario + "'";
+            SQLiteDatabase db = conexionDb.getWritableDatabase();
+//            Log.i(LOC_TAG2, usuarios.toString());
+            db.execSQL(sql);
+//            Log.i(LOC_TAG2, usuarios.toString());
+            db.close();
+//            cursor.close();
+            return true;
+        } else if (loguiarDesloguiar.equals("INATIVO")) {
+            String sql = "UPDATE usuarios SET loguiado = '" + loguiarDesloguiar + "' WHERE nombre='" + nombreUsuario + "'";
+            SQLiteDatabase db = conexionDb.getWritableDatabase();
+            Cursor cursor = db.rawQuery(sql, null);
+            db.close();
+            cursor.close();
+            return true;
+        }
+        return false;
+    }
 }
 //    UPDATE tblCustomers
 //    SET Email = 'None'

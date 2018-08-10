@@ -11,12 +11,12 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
 import ado.edu.itlas.taskapp.R;
 import ado.edu.itlas.taskapp.entidad.Categoria;
-
 import ado.edu.itlas.taskapp.entidad.Tarea;
 import ado.edu.itlas.taskapp.entidad.Usuario;
 import ado.edu.itlas.taskapp.repositorio.CategoriaRepositorio;
@@ -31,11 +31,9 @@ public class CrearTareas extends AppCompatActivity {
     CategoriaRepositorio categoriaRepositorio;
     UsuarioRepositorio usuarioRepositorio;
     Categoria categoria;
-
     Tarea tarea;
     Usuario usuario;
     TareasRepositorio tareasRepositorio = new TareasRepositorioImp(this);
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +42,9 @@ public class CrearTareas extends AppCompatActivity {
 
         final TextView lblUsuario = (TextView) findViewById(R.id.lblUsuario);
         lblUsuario.setText(AppConfig.getConfig().getUsuario().getNombre());
+
         categoriaRepositorio = new CategoriaRepositorioImp(this);
-        final List<Categoria> categorias = categoriaRepositorio.buscar(null);
+        List<Categoria> categorias = categoriaRepositorio.buscar(null);
 
         final Spinner spinerCategoria = (Spinner) findViewById(R.id.spinerCategoria);
         ArrayAdapter<Categoria> adapterCategoria = new ArrayAdapter<Categoria>(this, android.R.layout.simple_list_item_1, categorias);
@@ -62,7 +61,6 @@ public class CrearTareas extends AppCompatActivity {
 
 
         final Button btnGuardar = (Button) findViewById(R.id.btnGuardar);
-
         btnGuardar.setOnClickListener(
                 new View.OnClickListener() {
                     @Override

@@ -3,8 +3,6 @@ package ado.edu.itlas.taskapp.repositorio;
 import java.util.List;
 
 import ado.edu.itlas.taskapp.entidad.Tarea;
-
-
 import ado.edu.itlas.taskapp.entidad.Usuario;
 
 public interface TareasRepositorio{
@@ -12,9 +10,8 @@ public interface TareasRepositorio{
 
     public Tarea buscar(int id);
 
-
     public List<Tarea> buscarAsignadoA(Usuario usuarios);
 
     public List<Tarea> buscarCreadoPor(Usuario usuarios);
-
+    public boolean actualizar(Tarea tarea);
 }

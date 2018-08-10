@@ -3,10 +3,7 @@ package ado.edu.itlas.taskapp.vista;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ListView;
-
-import com.google.gson.Gson;
 
 import java.util.List;
 
@@ -29,10 +26,5 @@ UsuarioRepositorio usuarioRepositorio;
 //        Log.i(log_Tac, "Total de categoria");
         ListView catListView = (ListView) findViewById(R.id.listUsuario);
         catListView.setAdapter(new UsuarioListaAdapter(this, usuarios));
-
-
-
-
-
     }
 }

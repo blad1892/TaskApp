@@ -47,7 +47,7 @@ public class LoginRegistroActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (usuarios == null) {
-                    usuarios = new Usuario(null, null, null, null, null);
+                    usuarios = new Usuario(null, null, null, null, null,null);
                 }
                 usuarios.setEmail(txtEmail.getText().toString());
                 usuarios.setNombre(txtNombre.getText().toString());

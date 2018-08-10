@@ -2,9 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ado.edu.itlas.taskapp">
 
-    <!--establece permiso para que  la app se conecte a internet-->
-<uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -30,7 +27,8 @@
         <activity android:name=".vista.CrearTareas" />
         <activity android:name=".vista.MostrarTareaCreada" />
         <activity android:name=".vista.UsuarioListaAdapter" />
-        <activity android:name=".vista.MostrarTareaCreadaTecnico"></activity>
+        <activity android:name=".vista.MostrarTareaCreadaTecnico" />
+        <activity android:name=".vista.ActivityListaAdapterCreador"></activity>
     </application>
 
 </manifest>

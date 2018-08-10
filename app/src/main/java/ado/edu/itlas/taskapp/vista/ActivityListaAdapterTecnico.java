@@ -55,14 +55,23 @@ public class ActivityListaAdapterTecnico extends BaseAdapter {
         TextView lblNombreUsuarioAsignado = (TextView) view.findViewById(R.id.lblNombreUsuarioAsignado);
         TextView lblCategoria = (TextView) view.findViewById(R.id.lblCategoria);
         TextView lblProceso = (TextView) view.findViewById(R.id.lblProceso);
+        TextView lblId = (TextView) view.findViewById(R.id.lblId);
 
         Tarea ta = tareas.get(i);
 
+        lblId.setText(ta.getId().toString());
         lblFecha.setText(ta.getFecha().toString());
         lblDescripcion.setText(ta.getDescripcion());
         lblNombreUsuarioAsignado.setText(ta.getUsuarioAsignado().toString());
         lblCategoria.setText(ta.getCategoria().toString());
         String est = ta.getEstado().toString();
+        if (est == "PENDIENTE") {
+            lblProceso.setTextColor(Color.parseColor("#FFFF8800"));
+        } else if (est == "EN_PROCESO") {
+            lblProceso.setTextColor(Color.BLUE);
+        } else if (est == "TERMINADO") {
+            lblProceso.setTextColor(Color.GREEN);
+        }
         lblProceso.setText(est);
 
         return view;

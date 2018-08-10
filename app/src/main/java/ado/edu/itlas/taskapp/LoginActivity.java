@@ -3,23 +3,12 @@ package ado.edu.itlas.taskapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.google.gson.Gson;
-
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 
 import ado.edu.itlas.taskapp.entidad.Usuario;
 import ado.edu.itlas.taskapp.repositorio.UsuarioRepositorio;
@@ -41,47 +30,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
-////////////////////////////////implemetar gjon//////////////////////
-
-//        Usuario usuario = new Usuario();
-//        usuario.setEmail("bladimir@hotmail.com ");
-//        usuario.setNombre("bladimir rojas");
-//        Gson g = new Gson();
-//        String json = g.toJson(usuario);
-//
-//        Log.i("JSON", json);
-//
-//
-//        String usuarioString = "{\"email\":\"bladimir@hotmail.com \",\"nombre\":\"bladimir rojas\"}";
-//
-//        Usuario u = g.fromJson(usuarioString, Usuario.class);
-//
-//        Log.i("JSON.nombre", u.getNombre());
-//        Log.i("JSON.email", u.getEmail());
-//
-//        try {
-//            URL gitapi = new URL("https://api.github.com/gists/public");
-//            HttpURLConnection connecion = (HttpURLConnection) gitapi.openConnection();
-//
-//            if (connecion.getResponseCode() == 200) {
-//                InputStream result = connecion.getInputStream();
-//
-//                ByteArrayOutputStream result1 = new ByteArrayOutputStream();
-//                byte[] buffer = new byte[1024];
-//                int length;
-//
-//                while ((length = result.read(buffer)) != -1) {
-//                    result1.write(buffer, 0, length);
-//                }
-//                Log.i("API", result1.toString());
-//            }
-//        } catch (MalformedURLException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-        ////////////////////////////////////Gson API/////////////////////////////////////////
         usuarioRepositorio = new UsuarioRepositorioImp(this);
 
         Button btnIniciar = (Button) findViewById(R.id.btnIniciar);
@@ -99,12 +47,10 @@ public class LoginActivity extends AppCompatActivity {
                                               usuario = usuarioRepositorio.buscarUser(usuario.toString());
 
                                               if (txtNombre.getText().toString().equals("admin") && txtContracena.getText().toString().equals("admin")) {
-
                                                   Intent intento = new Intent(LoginActivity.this, MainActivity.class);
                                                   startActivity(intento);
                                                   return;
                                               }
-
                                               if (usuario == null) {
                                                   Toast miToas = Toast.makeText(LoginActivity.this, "Usuario no registrado", Toast.LENGTH_LONG);
                                                   miToas.setGravity(Gravity.CENTER, 20, 40);
@@ -128,24 +74,7 @@ public class LoginActivity extends AppCompatActivity {
                                                   Toast miToas = Toast.makeText(LoginActivity.this, "La Contraceña es incorecta", Toast.LENGTH_LONG);
                                                   miToas.setGravity(Gravity.CENTER, 20, 40);
                                                   miToas.show();
-                                              }
 
-                                              if (usuario.getNombre().equals(txtNombre.getText().toString()) && usuario.getContracena().equals(txtContracena.getText().toString())) {
-
-                                                  AppConfig.getConfig().setUsuario(usuario);
-
-                                                  if (usuario.getTipoUsuario() == Usuario.TipoUsuario.TECNICO) {
-                                                      Intent intento = new Intent(LoginActivity.this, TareaUsuarioTecnico.class);
-                                                      startActivity(intento);
-                                                  } else if (usuario.getTipoUsuario().equals(Usuario.TipoUsuario.NORMAL)) {
-                                                      Intent intento = new Intent(LoginActivity.this, TareaUsuarioNormal.class);
-                                                      startActivity(intento);
-                                                  }
-
-                                              } else if (usuario.getNombre().equals(txtUsuario.getText().toString()) && usuario.getContracena() != txtContracena.getText().toString()) {
-                                                  Toast miToas = Toast.makeText(LoginActivity.this, "La Contraceña es incorecta", Toast.LENGTH_LONG);
-                                                  miToas.setGravity(Gravity.CENTER, 20, 40);
-                                                  miToas.show();
                                               }
                                           }
                                       }
@@ -158,6 +87,5 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intento);
             }
         });
-    }
     }
 }

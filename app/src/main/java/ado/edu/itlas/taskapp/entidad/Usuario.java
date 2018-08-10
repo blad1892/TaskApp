@@ -17,6 +17,15 @@ public class Usuario implements Serializable {
     private String email;
     private String contracena;
     private TipoUsuario tipoUsuario;
+    private String loguiado;
+
+    public String getLoguiado() {
+        return loguiado;
+    }
+
+    public void setLoguiado(String loguiado) {
+        this.loguiado = loguiado;
+    }
 
     public Integer getId() {
         return id;
@@ -58,7 +67,6 @@ public class Usuario implements Serializable {
         this.tipoUsuario = tipoUsuario;
     }
 
-
     public Usuario(String usuarioCreador) {
 
         this.nombre = nombre;
@@ -70,17 +78,16 @@ public class Usuario implements Serializable {
         this.email = email;
         this.contracena = contracena;
         this.tipoUsuario = tipoUsuario;
-
+        this.loguiado = loguiado;
     }
 
-
-    public Usuario(Integer id, String nombre, String email, String contracena, TipoUsuario tipoUsuario) {
+    public Usuario(Integer id, String nombre, String email, String contracena, TipoUsuario tipoUsuario, String loguiado) {
         this.id = id;
         this.nombre = nombre;
         this.email = email;
         this.contracena = contracena;
         this.tipoUsuario = tipoUsuario;
-
+        this.loguiado = loguiado;
     }
 
     @Override

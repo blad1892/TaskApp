@@ -13,20 +13,16 @@ import android.widget.TextView;
 import java.util.List;
 
 import ado.edu.itlas.taskapp.R;
-
 import ado.edu.itlas.taskapp.entidad.Tarea;
 import ado.edu.itlas.taskapp.entidad.Usuario;
 import ado.edu.itlas.taskapp.repositorio.TareasRepositorio;
-
 import ado.edu.itlas.taskapp.repositorio.UsuarioRepositorio;
 import ado.edu.itlas.taskapp.repositorio.db.TareasRepositorioImp;
 import ado.edu.itlas.taskapp.repositorio.db.UsuarioRepositorioImp;
 
 public class TareaUsuarioNormal extends AppCompatActivity {
-
     Usuario usuario;
     TareasRepositorio tareasRepositorio = new TareasRepositorioImp(this);
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,21 +33,17 @@ public class TareaUsuarioNormal extends AppCompatActivity {
         final List<Tarea> tareas = tareasRepositorio.buscarCreadoPor(usuario);
 
         ListView tareasList = (ListView) findViewById(R.id.listViewTareas);
-        tareasList.setAdapter(new ActivityListaAdapterTecnico(this, tareas));
+        tareasList.setAdapter(new ActivityListaAdapterCreador(this, tareas));
 
         final TextView lblUsuario = (TextView) findViewById(R.id.lblUsuario);
-
         lblUsuario.setText(AppConfig.getConfig().getUsuario().toString());
-
 
         Button btnCrearTarea = (Button) findViewById(R.id.btnCrearTarea);
         btnCrearTarea.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intento = new Intent(TareaUsuarioNormal.this, CrearTareas.class);
-
                 intento.putExtra("usuario", lblUsuario.getText());
-
                 startActivity(intento);
             }
         });
