@@ -38,10 +38,10 @@
 
         <TextView
             android:id="@+id/lblCategoria"
-            android:layout_width="174dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginStart="40dp"
+            android:layout_marginLeft="55dp"
+
             android:layout_marginTop="5dp"
             android:text="@string/mostrarcategoria"
             android:textColor="@android:color/black"
@@ -60,9 +60,9 @@
 
         <TextView
             android:id="@+id/lblUsuarioAsignado"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="55dp"
             android:layout_marginTop="5dp"
             android:text="Usuario"
             android:textColor="@android:color/black"
@@ -82,7 +82,7 @@
             android:id="@+id/lblEstado"
             android:layout_width="138dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="55dp"
             android:layout_marginTop="5dp"
             android:text="Estado"
             android:textColor="@android:color/black"
