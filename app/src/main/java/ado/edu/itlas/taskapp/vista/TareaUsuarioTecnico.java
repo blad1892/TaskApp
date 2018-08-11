@@ -35,7 +35,7 @@ public class TareaUsuarioTecnico extends AppCompatActivity {
         Button btnProceso = (Button) findViewById(R.id.btnProceso);
         Button btnBusqueda = (Button) findViewById(R.id.btnBusqueda);
 
-        ListView taLisViewTecnico = (ListView) findViewById(R.id.tareaListViewTecnico);
+        final ListView taLisViewTecnico = (ListView) findViewById(R.id.tareaListViewTecnico);
 
         usuario = new Usuario();
         usuario.setNombre(AppConfig.getConfig().getUsuario().toString());
@@ -55,5 +55,60 @@ public class TareaUsuarioTecnico extends AppCompatActivity {
             }
         });
 
+        btnPendiente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                usuario = new Usuario();
+                usuario.setNombre(AppConfig.getConfig().getUsuario().toString());
+                final List<Tarea> tareas1 = tareasRepositorio.buscarAsignadoA(usuario);
+                String[] posiciones = new String[tareas1.size()];
+                int tama = 0;
+                for (int i = 0; i < tareas1.size(); i++) {
+                    if (tareas1.get(i).getEstado().toString().equals("PENDIENTE")) {
+                        posiciones[i] = i + "";
+                        tama++;
+                    }
+                }
+                final List<Tarea> tareas2 = new ArrayList<Tarea>(tama);
+                int k = 0;
+                for (int i = 0; i < posiciones.length; i++) {
+                    if (posiciones[i] != null) {
+                        Integer j = Integer.parseInt(posiciones[i]);
+                        tareas2.add(k, tareas1.get(j));
+                        k++;
+                    }
+                }
+
+                taLisViewTecnico.setAdapter(new ActivityListaAdapterTecnico(TareaUsuarioTecnico.this, tareas2));
+            }
+        });
+
+        btnProceso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                usuario = new Usuario();
+                usuario.setNombre(AppConfig.getConfig().getUsuario().toString());
+                final List<Tarea> tareas1 = tareasRepositorio.buscarAsignadoA(usuario);
+                String[] posiciones = new String[tareas1.size()];
+                int tama = 0;
+                for (int i = 0; i < tareas1.size(); i++) {
+                    if (tareas1.get(i).getEstado().toString().equals("EN_PROCESO")) {
+                        posiciones[i] = i + "";
+                        tama++;
+                    }
+                }
+                final List<Tarea> tareas2 = new ArrayList<Tarea>(tama);
+                int k = 0;
+                for (int i = 0; i < posiciones.length; i++) {
+                    if (posiciones[i] != null) {
+                        Integer j = Integer.parseInt(posiciones[i]);
+                        tareas2.add(k, tareas1.get(j));
+                        k++;
+                    }
+                }
+
+                taLisViewTecnico.setAdapter(new ActivityListaAdapterTecnico(TareaUsuarioTecnico.this, tareas2));
+            }
+        });
     }
 }

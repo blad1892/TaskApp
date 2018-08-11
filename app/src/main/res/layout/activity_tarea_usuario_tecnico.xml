@@ -43,19 +43,6 @@
             android:text="Busqueda" />
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/tareaListViewTecnico"
-        android:layout_width="368dp"
-        android:layout_height="395dp"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
-
-    </ListView>
-
     <TextView
         android:id="@+id/lblUsuarioL"
         android:layout_width="wrap_content"
@@ -67,6 +54,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.032" />
+
+    <ListView
+        android:id="@+id/tareaListViewTecnico"
+        android:layout_width="362dp"
+        android:layout_height="392dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+    </ListView>
 
 
 </android.support.constraint.ConstraintLayout>

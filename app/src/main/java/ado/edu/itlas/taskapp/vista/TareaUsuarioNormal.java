@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import ado.edu.itlas.taskapp.R;
@@ -32,7 +33,7 @@ public class TareaUsuarioNormal extends AppCompatActivity {
         usuario.setNombre(AppConfig.getConfig().getUsuario().toString());
         final List<Tarea> tareas = tareasRepositorio.buscarCreadoPor(usuario);
 
-        ListView tareasList = (ListView) findViewById(R.id.listViewTareas);
+        final ListView tareasList = (ListView) findViewById(R.id.listViewTareas);
         tareasList.setAdapter(new ActivityListaAdapterCreador(this, tareas));
 
         final TextView lblUsuario = (TextView) findViewById(R.id.lblUsuario);
@@ -68,7 +69,35 @@ public class TareaUsuarioNormal extends AppCompatActivity {
                 List<Tarea> tas = tareasRepositorio.buscarCreadoPor(usuario);
 
                 ListView tareasList = (ListView) findViewById(R.id.listViewTareas);
-                tareasList.setAdapter(new ActivityListaAdapterTecnico(TareaUsuarioNormal.this, tas));
+                tareasList.setAdapter(new ActivityListaAdapterCreador(TareaUsuarioNormal.this, tas));
+            }
+        });
+
+        Button btnProceso = (Button) findViewById(R.id.btnProceso);
+        btnProceso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                usuario = new Usuario();
+                usuario.setNombre(AppConfig.getConfig().getUsuario().toString());
+                final List<Tarea> tareas1 = tareasRepositorio.buscarCreadoPor(usuario);
+                String[] posiciones = new String[tareas1.size()];
+                int tama = 0;
+                for (int i = 0; i < tareas1.size(); i++) {
+                    if (tareas1.get(i).getEstado().toString().equals("EN_PROCESO")) {
+                        posiciones[i] = i + "";
+                        tama++;
+                    }
+                }
+                final List<Tarea> tareas2 = new ArrayList<Tarea>(tama);
+                int k = 0;
+                for (int i = 0; i < posiciones.length; i++) {
+                    if (posiciones[i] != null) {
+                        Integer j = Integer.parseInt(posiciones[i]);
+                        tareas2.add(k, tareas1.get(j));
+                        k++;
+                    }
+                }
+                tareasList.setAdapter(new ActivityListaAdapterTecnico(TareaUsuarioNormal.this, tareas2));
             }
         });
     }

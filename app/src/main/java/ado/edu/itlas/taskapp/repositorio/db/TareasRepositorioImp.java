@@ -77,7 +77,7 @@ public class TareasRepositorioImp implements TareasRepositorio {
         ContentValues cv = new ContentValues();
         cv.put(CAMPO_NOMBRE, tarea.getNombre());
         cv.put(CAMPO_DESCRIPCION, tarea.getDescripcion());
-        cv.put(CAMPO_FECHA, tarea.getFecha().toString());
+        cv.put(CAMPO_FECHA, tarea.getFecha().getTime());
         if (tarea.getFechaTerminado() != null) {
             cv.put(CAMPO_FECHA_TERMINADO, tarea.getFechaTerminado().toString());
         }
@@ -193,7 +193,6 @@ public class TareasRepositorioImp implements TareasRepositorio {
             cs.moveToNext();
 
         }
-
         return tareas;
     }
 

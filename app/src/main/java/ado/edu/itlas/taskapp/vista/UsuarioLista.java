@@ -21,7 +21,7 @@ UsuarioRepositorio usuarioRepositorio;
         setContentView(R.layout.activity_lista_usuario);
 
         usuarioRepositorio = new UsuarioRepositorioImp(this);
-        List<Usuario> usuarios = usuarioRepositorio.buscar(null);
+        List<Usuario> usuarios = usuarioRepositorio.buscarLista(null);
 
 //        Log.i(log_Tac, "Total de categoria");
         ListView catListView = (ListView) findViewById(R.id.listUsuario);

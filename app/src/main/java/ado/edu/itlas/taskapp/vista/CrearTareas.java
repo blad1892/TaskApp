@@ -1,6 +1,8 @@
 package ado.edu.itlas.taskapp.vista;
 
 import android.content.Intent;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +13,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -63,6 +69,7 @@ public class CrearTareas extends AppCompatActivity {
         final Button btnGuardar = (Button) findViewById(R.id.btnGuardar);
         btnGuardar.setOnClickListener(
                 new View.OnClickListener() {
+                    @RequiresApi(api = Build.VERSION_CODES.O)
                     @Override
                     public void onClick(View v) {
                         Usuario ut = (Usuario) spinerUsuarioTecnico.getSelectedItem();
@@ -78,6 +85,7 @@ public class CrearTareas extends AppCompatActivity {
                         tarea.setEstado(Tarea.TareaEstado.PENDIENTE);
                         tarea.setUsuarioCreador(AppConfig.getConfig().getUsuario());
                         tarea.setUsuarioAsignado(ut);
+
                         tarea.setFecha(new Date());
 
                         if (tareasRepositorio.guardar(tarea)) {

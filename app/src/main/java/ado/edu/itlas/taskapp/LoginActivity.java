@@ -30,6 +30,46 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        // ////////////////////////////// implemetar gjon //////////////// //////
+        //         Usuario usuario = nuevo Usuario ();
+//         usuario.setEmail ("bladimir@hotmail.com");
+//         usuario.setNombre ("bladimir rojas");
+//         Gson g = new Gson ();
+//         String json = g.toJson (usuario);
+//
+//         Log.i ("JSON", json);
+//
+//
+//         String usuarioString = "{\" email \ ": \" bladimir@hotmail.com \ ", \" nombre \ ": \" bladimir rojas \ "}";
+//
+//         Usuario u = g.fromJson (usuarioString, Usuario.class);
+//
+//         Log.i ("JSON.nombre", u.getNombre ());
+//         Log.i ("JSON.email", u.getEmail ());
+//
+//         try {
+//             URL gitapi = nueva URL ("https://api.github.com/gists/public");
+//             HttpURLConnection connecion = (HttpURLConnection) gitapi.openConnection ();
+//
+//             if (connecion.getResponseCode () == 200) {
+//                 InputStream result = connecion.getInputStream ();
+//
+//                 ByteArrayOutputStream result1 = new ByteArrayOutputStream ();
+//                 byte [] buffer = new byte [1024];
+//                 int length;
+//
+//                 while ((length = result.read (buffer))! = -1) {
+//                     result1.write (buffer, 0, length);
+//                 }
+//                 Log.i ("API", result1.toString ());
+//             }
+//         } catch (MalformedURLException e) {
+//             e.printStackTrace ();
+//         } catch (IOException e) {
+//             e.printStackTrace ();
+//         }
+        // ////////////////////////////////// Gson API //////////// /////////////////////////////
+
         usuarioRepositorio = new UsuarioRepositorioImp(this);
 
         Button btnIniciar = (Button) findViewById(R.id.btnIniciar);

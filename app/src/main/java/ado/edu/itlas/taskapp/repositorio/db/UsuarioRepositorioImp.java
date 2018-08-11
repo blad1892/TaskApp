@@ -121,6 +121,37 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
     }
 
     @Override
+    public List<Usuario> buscarLista(String tecnico) {
+        List<Usuario> usuarios = new ArrayList<>();
+//        String sql = "SELECT id, nombre, tipoUsuario FROM usuarios WHERE tipoUsuario = 'TECNICO'";
+        SQLiteDatabase db = conexionDb.getReadableDatabase();
+        String[] columna = {"id", CAMPO_NOMBRE, CAMPO_EMAIL, CAMPO_CONTRACENA, CAMPO_TIPO_USUARIO};
+
+        Cursor cursor = db.query(TABLA_USUARIO, columna, null, null, null, null, null);
+        cursor.moveToFirst();
+
+        while (!cursor.isAfterLast()) {
+            int id = cursor.getInt(cursor.getColumnIndex("id"));
+            String nombre = cursor.getString(cursor.getColumnIndex(CAMPO_NOMBRE));
+            String email = cursor.getString(cursor.getColumnIndex(CAMPO_EMAIL));
+            String contraceña = cursor.getString(cursor.getColumnIndex(CAMPO_CONTRACENA));
+            String tipoUsuario = cursor.getString(cursor.getColumnIndex(CAMPO_TIPO_USUARIO));
+
+
+            if (tipoUsuario.equals("TECNICO")) {
+                usuarios.add(new Usuario(id, nombre + " T", email, contraceña, Usuario.TipoUsuario.TECNICO, "INATIVO"));
+            } else if (tipoUsuario.equals("NORMAL")) {
+                usuarios.add(new Usuario(id, nombre + " N", email, contraceña, Usuario.TipoUsuario.TECNICO, "INATIVO"));
+            }
+            cursor.moveToNext();
+        }
+        db.close();
+        cursor.close();
+
+        return usuarios;
+    }
+
+    @Override
     public List<Usuario> buscar(String tecnico) {
 
         List<Usuario> usuarios = new ArrayList<>();
@@ -158,7 +189,7 @@ public class UsuarioRepositorioImp implements UsuarioRepositorio {
         Cursor cursor = db.rawQuery(sql, null);
         cursor.moveToFirst();
         String nombre = cursor.getString(cursor.getColumnIndex(CAMPO_NOMBRE));
-        usuarios = new Usuario(null,nombre,null,null,null,"ACTIVO");
+        usuarios = new Usuario(null, nombre, null, null, null, "ACTIVO");
 
         db.close();
         cursor.close();
